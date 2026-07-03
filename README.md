@@ -33,12 +33,11 @@ tejas/
 ## Development
 
 ```bash
-cd tejas
 npm install
 npm run dev
 ```
 
-Runs on [http://localhost:3001](http://localhost:3001) (port 3001 to avoid conflict with DHE main site).
+Runs on [http://localhost:3001](http://localhost:3001).
 
 ## Build
 
@@ -49,31 +48,17 @@ npm start
 
 ## Deployment
 
-Deploy as a **separate Vercel project** (`dhe-projects/tejas`) with **Root Directory: `tejas`**.
+**Live:** https://tejas.dhe.org.in  
+**Vercel project:** [dhe-projects/tejas](https://vercel.com/dhe-projects/tejas)  
+**GitHub:** https://github.com/dheWeb/tejas
 
-### Production deploy (monorepo)
+Connect this repository in Vercel (Root Directory: `.` — repo root). Pushes to `main` auto-deploy production.
 
-From the repository root (not inside `tejas/`):
-
-```bash
-# Windows PowerShell
-$env:VERCEL_ORG_ID="team_0PYXWQMwAV9fPWOTuxk54H9K"
-$env:VERCEL_PROJECT_ID="prj_C8HQBcOrjDqRBN4PL8mOthE8HOM4"
-npx vercel deploy --prod --yes
-```
-
-Or from `tejas/` before root directory was set on Vercel:
+Manual deploy:
 
 ```bash
-cd tejas
 npx vercel deploy --prod --yes
 ```
-
-**Live:** https://tejas.dhe.org.in
-
-### Git auto-deploy
-
-Connect the same GitHub repo as the main DHE site (`dheWeb/dhe-orgin.`) in [Vercel → tejas → Settings → Git](https://vercel.com/dhe-projects/tejas/settings/git). Root Directory must be **`tejas`** (already configured). Pushes to `main` that touch `tejas/**` will then deploy automatically.
 
 ## Phase 0 Scope
 
