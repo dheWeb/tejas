@@ -11,19 +11,19 @@ export const faqItems: FAQItem[] = [
     category: "General",
     question: "What is the relationship between TEJAS and Shiksha Mahakumbh?",
     answer:
-      "DHE Olympiads are conducted under the aegis of Shiksha Mahakumbh Abhiyan. The 1st DHE English Olympiad was under SMK 5.0 (2025). SMK 6.0 (9–11 Oct 2026, NIT Hamirpur) features three Olympiad streams: English, Maths, and Technology for Classes III–X.",
+      "The 1st DHE English Olympiad (2025) was conducted under Shiksha Mahakumbh 5th Edition. The current Dr APJ Abdul Kalam Edition is an independent TEJAS Olympiad cycle by Olympiad Cell, DHE — held after Shiksha Mahakumbh, not under its aegis.",
   },
   {
     category: "General",
     question: "What was the 1st DHE English Olympiad?",
     answer:
-      "Conducted 13–16 October 2025 across 25 schools in Punjab, Haryana and Chandigarh with 10,040+ students (Classes I–X). Organised by Olympiad Cell, DHE in collaboration with English Connection. MCQ format with OMR sheets. Overall toppers felicitated at SMK 5.0, NIPER Mohali (1 Nov 2025).",
+      "Conducted 13–16 October 2025 across 25 schools in Punjab, Haryana and Chandigarh with 10,040+ students (Classes I–X). Organised by Olympiad Cell, DHE in collaboration with English Connection under Shiksha Mahakumbh 5th Edition. MCQ format with OMR sheets.",
   },
   {
     category: "Olympiads",
-    question: "Which Olympiads are active for SMK 6.0?",
+    question: "Which Olympiads are active in the current TEJAS edition?",
     answer:
-      "Three streams: DHE English Olympiad 2.0, DHE Maths Olympiad, and DHE Tech Olympiad for Classes III–X. Registration and exam dates to be announced. Top achievers felicitated at NIT Hamirpur, 9–11 October 2026.",
+      "Three streams: DHE English Olympiad 2.0, DHE Maths Olympiad, and DHE Tech Olympiad for Classes III–X. This is the independent Dr APJ Abdul Kalam Edition — not part of Shiksha Mahakumbh.",
   },
   {
     category: "Registration",
@@ -41,13 +41,13 @@ export const faqItems: FAQItem[] = [
     category: "Exams",
     question: "What are the examination levels?",
     answer:
-      "Level A: Class I–II, Level B: Class III–IV, Level C: Class V–VI, Level D: Class VII–VIII, Level E: Class IX–X. SMK 6.0 active streams focus on Classes III–X (Levels B–E).",
+      "Level A: Class I–II, Level B: Class III–IV, Level C: Class V–VI, Level D: Class VII–VIII, Level E: Class IX–X. Current active streams focus on Classes III–X (Levels B–E).",
   },
   {
     category: "Awards",
     question: "What awards do winners receive?",
     answer:
-      "Overall and school-wise top 3 at each level receive medals, certificates, and book sets. All participants receive digital certificates with QR verification. Top achievers are felicitated at Shiksha Mahakumbh.",
+      "Overall and school-wise top 3 at each level receive medals, certificates, and book sets. All participants receive digital certificates with QR verification. Top achievers are felicitated at the TEJAS National Felicitation Ceremony.",
   },
   {
     category: "Preparation",
@@ -59,6 +59,6 @@ export const faqItems: FAQItem[] = [
     category: "Future",
     question: "What Olympiads are planned next?",
     answer:
-      "After SMK 6.0 core streams, DHE plans DHE Sanskriti Olympiad and expansion to Science, Hindi, Sanskrit, GK, AI, Coding, and Innovation under the TEJAS ecosystem.",
+      "After the current core streams, DHE plans DHE Sanskriti Olympiad and expansion to Science, Hindi, Sanskrit, GK, AI, Coding, and Innovation under the TEJAS ecosystem.",
   },
 ];

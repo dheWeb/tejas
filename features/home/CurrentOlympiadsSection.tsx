@@ -14,9 +14,9 @@ export function CurrentOlympiadsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <SectionHeader
-            eyebrow="Shiksha Mahakumbh 6.0"
+            eyebrow="Dr APJ Abdul Kalam Edition 2026"
             title="Active Olympiad Streams"
-            subtitle="DHE English, Maths & Technology Olympiads for Classes III–X. Felicitation at NIT Hamirpur, 9–11 Oct 2026."
+            subtitle="Independent TEJAS Olympiad cycle — English, Maths & Technology for Classes III–X. Held after Shiksha Mahakumbh, not under its aegis."
           />
         </FadeIn>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

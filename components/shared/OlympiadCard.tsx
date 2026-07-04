@@ -71,7 +71,7 @@ export function OlympiadCard({
           <Icon className="h-6 w-6" aria-hidden />
         </div>
         {status === "active" ? (
-          <Badge variant="success">SMK 6.0</Badge>
+          <Badge variant="success">Active</Badge>
         ) : status === "coming-soon" ? (
           <Badge variant="outline">Coming Soon</Badge>
         ) : registrationOpen ? (

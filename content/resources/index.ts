@@ -16,7 +16,7 @@ export const resourceRegistry: ResourceItem[] = [
   { id: "prac-eng-omr", title: ls("OMR Practice Sheet — English Olympiad", "OMR अभ्यास शीट"), description: ls("Practice OMR filling for exam day", "परीक्षा दिवस OMR अभ्यास"), category: "practice", subject: "English", type: "practice", href: "#" },
   { id: "prac-mock-all", title: ls("Full-Length Mock Tests — All Active Streams", "पूर्ण मॉक टेस्ट"), description: ls("English, Maths, Technology mock tests", "तीनों streams"), category: "practice", subject: "All", type: "practice", href: "/prepare/mock-tests" },
   // Videos
-  { id: "vid-eng-strategy", title: ls("English Olympiad Strategy Session", "अंग्रेज़ी रणनीति सत्र"), description: ls("DHE Academic Council masterclass", "DHE masterclass"), category: "videos", subject: "English", type: "video", href: "#" },
+  { id: "vid-eng-strategy", title: ls("English Olympiad Strategy Session", "अंग्रेज़ी रणनीति सत्र"), description: ls("Olympiad Cell, DHE masterclass", "Olympiad Cell masterclass"), category: "videos", subject: "English", type: "video", href: "#" },
   { id: "vid-ai-intro", title: ls("Introduction to AI for School Students", "AI परिचय"), description: ls("DHE Innovation Cell — 35 min session", "35 मिनट सत्र"), category: "videos", subject: "Technology", type: "video", href: "#" },
   // Articles & Blogs
   { id: "art-nep-olympiad", title: ls("NEP 2020 and Olympiad Culture in Bharat", "NEP 2020 और ओलंपियाड संस्कृति"), description: ls("How competitive assessment aligns with NEP vision", "NEP vision के साथ alignment"), category: "articles", type: "article", href: "#" },
@@ -25,16 +25,16 @@ export const resourceRegistry: ResourceItem[] = [
   { id: "tr-guide", title: ls("Teacher's Guide — DHE Olympiads", "शिक्षक गाइड"), description: ls("Complete guide for Olympiad coordinators", "ओलंपियाड समन्वयक गाइड"), category: "teacher", type: "pdf", href: "#" },
   { id: "tr-lesson-plans", title: ls("Weekly Lesson Plans — English Olympiad Prep", "साप्ताहिक lesson plans"), description: ls("6-week classroom preparation plan", "6-सप्ताह कक्षा योजना"), category: "teacher", subject: "English", type: "pdf", href: "#" },
   // School Resources
-  { id: "sch-reg-guide", title: ls("School Registration Guide — SMK 6.0", "विद्यालय पंजीकरण गाइड"), description: ls("Step-by-step registration for schools", "पंजीकरण प्रक्रिया"), category: "school", type: "pdf", href: "#" },
+  { id: "sch-reg-guide", title: ls("School Registration Guide — Kalam Edition 2026", "विद्यालय पंजीकरण गाइड"), description: ls("Step-by-step registration for schools", "पंजीकरण प्रक्रिया"), category: "school", type: "pdf", href: "#" },
   { id: "sch-invigilation", title: ls("Exam Invigilation Standards", "परीक्षा निरीक्षण मानक"), description: ls("OMR exam day protocols for schools", "OMR exam day protocols"), category: "school", type: "pdf", href: "#" },
   // Downloads
   { id: "dl-eng-2025", title: ls("1st DHE English Olympiad — Brief Report", "प्रथम DHE English Olympiad रिपोर्ट"), description: ls("Official report with statistics and results", "आधिकारिक रिपोर्ट"), category: "downloads", subject: "English", type: "pdf", href: "#" },
   { id: "dl-sample-cert", title: ls("Sample Participation Certificate", "नमूना प्रमाणपत्र"), description: ls("Certificate format with QR verification", "QR सत्यापन प्रमाणपत्र"), category: "downloads", type: "pdf", href: "#" },
-  { id: "dl-syllabus-all", title: ls("SMK 6.0 Olympiad Syllabus — All Streams", "SMK 6.0 पाठ्यक्रम"), description: ls("English, Maths, Technology syllabus PDF", "तीनों streams पाठ्यक्रम"), category: "downloads", type: "pdf", href: "#" },
+  { id: "dl-syllabus-all", title: ls("TEJAS Olympiad Syllabus — All Active Streams", "TEJAS पाठ्यक्रम"), description: ls("English, Maths, Technology syllabus PDF", "तीनों streams पाठ्यक्रम"), category: "downloads", type: "pdf", href: "#" },
   // Research
   { id: "res-olympiad-impact", title: ls("Impact of School Olympiads on Learning Outcomes", "ओलंपियाड का प्रभाव"), description: ls("DHE research paper on Olympiad Cell outcomes", "DHE research paper"), category: "research", type: "pdf", href: "#" },
   // Bal Shodh Patrika
-  { id: "bsp-guide", title: ls("Bal Shodh Patrika — Submission Guide", "बाल शोध पत्रिका गाइड"), description: ls("Classes 9–12 student research journal guidelines", "कक्षा 9–12 शोध journal"), category: "bal-shodh", type: "pdf", href: "https://www.rase.co.in/departments/academic-council#olympiad" },
+  { id: "bsp-guide", title: ls("Bal Shodh Patrika — Submission Guide", "बाल शोध पत्रिका गाइड"), description: ls("Classes 9–12 student research journal guidelines", "कक्षा 9–12 शोध journal"), category: "bal-shodh", type: "pdf", href: "https://www.shikshamahakumbh.com" },
 ];
 
 export const resourceCategories = [

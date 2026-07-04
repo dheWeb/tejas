@@ -84,12 +84,12 @@ export default function HallOfFamePage() {
               className="mt-20"
               eyebrow="Expanding"
               title="More Categories Coming"
-              subtitle="Teacher Excellence, Innovation Awards, Young Scientist, Young Innovator, Project Showcase — with SMK 6.0 Olympiads"
+              subtitle="Teacher Excellence, Innovation Awards, Young Scientist, Young Innovator, Project Showcase — with current TEJAS Olympiads"
             />
           </FadeIn>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {emptyCategories.map((cat) => (
-              <ComingSoonCard key={cat.id} title={cat.label.en} description="Results and recognition from SMK 6.0 Olympiads will populate this gallery." />
+              <ComingSoonCard key={cat.id} title={cat.label.en} description="Results and recognition from current TEJAS Olympiads will populate this gallery." />
             ))}
           </div>
         </div>

@@ -8,7 +8,7 @@ import { getCurrentEdition } from "@/data/editions";
 
 export const metadata = createMetadata({
   title: "Current Editions",
-  description: "Explore current and upcoming TEJAS editions honouring Bharat's greatest minds — aligned with Shiksha Mahakumbh Olympiad cycles.",
+  description: "Explore current and upcoming TEJAS editions honouring Bharat's greatest minds — independent national talent assessment by DHE.",
   path: "/editions",
 });
 
@@ -31,10 +31,10 @@ export default function EditionsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="mb-8 rounded-2xl border border-tejas-saffron/30 bg-tejas-saffron/5 p-6">
-              <p className="text-sm font-semibold text-tejas-saffron">Shiksha Mahakumbh 6.0 · Active Olympiad Streams</p>
+              <p className="text-sm font-semibold text-tejas-saffron">Dr APJ Abdul Kalam Edition 2026 · Independent TEJAS Cycle</p>
               <p className="mt-2 text-tejas-muted">
                 DHE English Olympiad 2.0, DHE Maths Olympiad, and DHE Tech Olympiad for Classes III–X.
-                Top achievers felicitated at NIT Hamirpur, 9–11 October 2026.
+                Conducted after Shiksha Mahakumbh — not under its aegis. Administered by Olympiad Cell, DHE.
               </p>
               <Link href={`/editions/${current.slug}`} className="mt-4 inline-block text-sm font-semibold text-tejas-saffron hover:underline">
                 Explore {current.name} →

@@ -1,19 +1,17 @@
 import type { LocalizedString } from "./types";
 
-/** Shiksha Mahakumbh 6.0 — current DHE Olympiad cycle (RASE Academic Council) */
+/** Current TEJAS edition — independent DHE Olympiad cycle (post–Shiksha Mahakumbh) */
 export const currentCycle = {
-  smkEdition: 6,
-  smkName: {
-    en: "Shiksha Mahakumbh 6.0 — Meeting of the Minds",
-    hi: "शिक्षा महाकुंभ 6.0 — मीटिंग ऑफ द माइंड्स",
+  editionSlug: "apj-abdul-kalam",
+  editionName: {
+    en: "Dr APJ Abdul Kalam Edition",
+    hi: "डॉ APJ अब्दुल कलाम संस्करण",
   } satisfies LocalizedString,
-  summitDates: {
-    en: "9–11 October 2026",
-    hi: "9–11 अक्टूबर 2026",
-  } satisfies LocalizedString,
-  summitVenue: {
-    en: "NIT Hamirpur, Himachal Pradesh",
-    hi: "एनआईटी हमीरपुर, हिमाचल प्रदेश",
+  editionYear: 2026,
+  /** Current olympiads are NOT under Shiksha Mahakumbh — independent TEJAS event after SMK */
+  independenceNote: {
+    en: "Independent TEJAS Olympiad cycle by Olympiad Cell, DHE — conducted after Shiksha Mahakumbh, not under its aegis.",
+    hi: "Olympiad Cell, DHE द्वारा स्वतंत्र TEJAS ओलंपियाड चक्र — शिक्षा महाकुंभ के बाद, उसकी छत्रछाया के बाहर।",
   } satisfies LocalizedString,
   activeStreams: ["english", "mathematics", "technology"] as const,
   grades: {
@@ -25,8 +23,8 @@ export const currentCycle = {
     hi: "पंजीकरण और परीक्षा तिथियाँ घोषित की जाएँगी",
   } satisfies LocalizedString,
   felicitation: {
-    en: "Top achievers will be honoured at Shiksha Mahakumbh 6.0 (9–11 Oct 2026, NIT Hamirpur)",
-    hi: "शीर्ष achievers को शिक्षा महाकुंभ 6.0 (9–11 अक्टूबर 2026, एनआईटी हमीरपुर) में सम्मानित किया जाएगा",
+    en: "Top achievers honoured at the TEJAS National Felicitation Ceremony (independent event — details to be announced)",
+    hi: "शीर्ष achievers को TEJAS राष्ट्रीय सम्मान समारोह में सम्मानित किया जाएगा (स्वतंत्र कार्यक्रम)",
   } satisfies LocalizedString,
   administeredBy: {
     en: "Olympiad Cell, Department of Holistic Education (DHE)",
@@ -34,16 +32,24 @@ export const currentCycle = {
   } satisfies LocalizedString,
   academicEnquiries: "academics@shikshamahakumbh.com",
   olympiadEmail: "olympiad@shikshamahakumbh.com",
-  raseReference: "https://www.rase.co.in/departments/academic-council#olympiad",
+  shikshaMahakumbhReference: "https://www.shikshamahakumbh.com",
+  shikshaMahakumbhOlympiadReference: "https://www.shikshamahakumbh.com",
 } as const;
 
-/** 1st DHE English Olympiad — past cycle (PDF report) */
+/** Edition label used in sample papers, calendars, etc. */
+export const CURRENT_EDITION_LABEL = "Kalam Edition 2026";
+
+/** 1st DHE English Olympiad — past cycle under Shiksha Mahakumbh (PDF report) */
 export const pastEnglishOlympiad2025 = {
   name: {
     en: "1st DHE English Olympiad",
     hi: "प्रथम DHE अंग्रेज़ी ओलंपियाड",
   } satisfies LocalizedString,
   smkEdition: 5,
+  underShikshaMahakumbh: {
+    en: "Conducted under the aegis of Shiksha Mahakumbh 5th Edition",
+    hi: "शिक्षा महाकुंभ 5th Edition की छत्रछाया में आयोजित",
+  } satisfies LocalizedString,
   examDates: {
     en: "13–16 October 2025",
     hi: "13–16 अक्टूबर 2025",

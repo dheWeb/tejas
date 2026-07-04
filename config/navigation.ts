@@ -32,9 +32,9 @@ export const mainNav: NavItem[] = [
         title: "Core Subjects",
         titleHi: "मुख्य विषय",
         items: [
-          { label: "English", labelHi: "अंग्रेज़ी", href: "/olympiads/english", description: "SMK 6.0 Active Stream", badge: "Active" },
-          { label: "Mathematics", labelHi: "गणित", href: "/olympiads/mathematics", description: "SMK 6.0 Active Stream", badge: "Active" },
-          { label: "Technology", labelHi: "प्रौद्योगिकी", href: "/olympiads/technology", description: "SMK 6.0 Active Stream", badge: "Active" },
+          { label: "English", labelHi: "अंग्रेज़ी", href: "/olympiads/english", description: "Current TEJAS Edition", badge: "Active" },
+          { label: "Mathematics", labelHi: "गणित", href: "/olympiads/mathematics", description: "Current TEJAS Edition", badge: "Active" },
+          { label: "Technology", labelHi: "प्रौद्योगिकी", href: "/olympiads/technology", description: "Current TEJAS Edition", badge: "Active" },
           { label: "Science", labelHi: "विज्ञान", href: "/olympiads/science", description: "Coming soon" },
         ],
       },

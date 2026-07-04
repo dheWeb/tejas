@@ -7,7 +7,7 @@ import { olympiads, getActiveOlympiads } from "@/data/olympiads";
 
 export const metadata = createMetadata({
   title: "Olympiads",
-  description: "DHE Olympiads under Shiksha Mahakumbh 6.0 — English, Maths, Technology for Classes III–X, plus future TEJAS streams.",
+  description: "Independent TEJAS Olympiads — English, Maths, Technology for Classes III–X in the Dr APJ Abdul Kalam Edition, plus future TEJAS streams.",
   path: "/olympiads",
 });
 
@@ -20,7 +20,7 @@ export default function OlympiadsPage() {
       <PageHero
         eyebrow="Olympiads"
         title="National Olympiad Series"
-        subtitle="Three active streams for SMK 6.0 — English, Maths, Technology. Ten-subject TEJAS ecosystem expanding nationwide."
+        subtitle="Three active streams in the independent Dr APJ Abdul Kalam Edition — held after Shiksha Mahakumbh. Ten-subject TEJAS ecosystem expanding nationwide."
         primaryCta={{ label: "Free Mock Test", href: "/prepare/mock-tests" }}
         secondaryCta={{ label: "Prepare Hub", href: "/prepare" }}
       />
@@ -28,9 +28,9 @@ export default function OlympiadsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <SectionHeader
-              eyebrow="SMK 6.0"
+              eyebrow="Kalam Edition 2026"
               title="Active Olympiad Streams"
-              subtitle="Classes III–X · Registration dates to be announced · Felicitation at NIT Hamirpur, 9–11 Oct 2026"
+              subtitle="Classes III–X · Independent TEJAS cycle · Registration dates to be announced"
             />
           </FadeIn>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

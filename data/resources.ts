@@ -38,7 +38,7 @@ export const prepareCategories: PrepareCategory[] = [
   {
     id: "videos",
     title: "Video Learning",
-    description: "Expert masterclasses from DHE Academic Council",
+    description: "Expert masterclasses from Olympiad Cell, DHE",
     count: 8,
     href: "/resources",
     gradient: "from-tejas-emerald to-teal-700",

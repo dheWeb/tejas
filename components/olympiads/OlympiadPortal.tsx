@@ -54,7 +54,7 @@ export function OlympiadPortal({ olympiad }: Props) {
                 {isComingSoon ? (
                   <Badge variant="outline" className="border-white/40 text-white">Coming Soon</Badge>
                 ) : (
-                  <Badge variant="outline" className="border-emerald-400 text-emerald-300">SMK 6.0 Active Stream</Badge>
+                  <Badge variant="outline" className="border-emerald-400 text-emerald-300">Current Edition</Badge>
                 )}
               </div>
               <h1 className="mt-4 text-4xl font-bold md:text-5xl">
@@ -87,7 +87,7 @@ export function OlympiadPortal({ olympiad }: Props) {
               </div>
             </div>
             {!isComingSoon && (
-              <Countdown targetDate="2026-10-09" label="Felicitation at SMK 6.0" />
+              <Countdown targetDate="2026-09-01" label="Registration opens soon" />
             )}
           </div>
         </div>
@@ -99,7 +99,7 @@ export function OlympiadPortal({ olympiad }: Props) {
         {isComingSoon && (
           <ComingSoonCard
             title={`${t(olympiad.name)} Olympiad`}
-            description="This stream is part of TEJAS expansion roadmap. Active streams for SMK 6.0: English, Maths, Technology."
+            description="This stream is part of the TEJAS expansion roadmap. Active streams in the current Kalam Edition: English, Maths, Technology."
           />
         )}
 

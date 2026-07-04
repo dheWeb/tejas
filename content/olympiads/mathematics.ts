@@ -1,5 +1,5 @@
 import type { OlympiadPortalContent } from "@/content/types";
-import { currentCycle } from "@/content/current-cycle";
+import { currentCycle, CURRENT_EDITION_LABEL } from "@/content/current-cycle";
 
 export const mathematicsOlympiad: OlympiadPortalContent = {
   slug: "mathematics",
@@ -9,7 +9,7 @@ export const mathematicsOlympiad: OlympiadPortalContent = {
     hi: "DHE गणित ओलंपियाड — तार्किक तर्क, समस्या समाधान और गणितीय उत्कृष्टता",
   },
   description: {
-    en: "The DHE Maths Olympiad strengthens conceptual clarity, analytical thinking, and problem-solving skills. Part of the three-stream national outreach under Shiksha Mahakumbh 6.0 for Classes III–X.",
+    en: "The DHE Maths Olympiad strengthens conceptual clarity, analytical thinking, and problem-solving skills. Part of the three-stream independent TEJAS Dr APJ Abdul Kalam Edition for Classes III–X — held after Shiksha Mahakumbh.",
     hi: "DHE गणित ओलंपियाड अवधारणात्मक स्पष्टता, विश्लेषणात्मक सोच और समस्या समाधान कौशल को मजबूत करता है।",
   },
   whySubject: {
@@ -33,7 +33,7 @@ export const mathematicsOlympiad: OlympiadPortalContent = {
       hi: "DHE ओलंपियाड सेल के माध्यम से विद्यालय पंजीकरण",
     },
     {
-      en: "Grade-appropriate level assignment (Levels B–E for SMK 6.0)",
+      en: "Grade-appropriate level assignment (Levels B–E for current TEJAS Edition)",
       hi: "कक्षा-अनुकूल स्तर निर्धारण",
     },
   ],
@@ -164,7 +164,7 @@ export const mathematicsOlympiad: OlympiadPortalContent = {
       title: { en: "Sample Paper — Level D", hi: "नमूना प्रश्नपत्र — स्तर D" },
       year: 2026,
       level: { en: "Level D", hi: "स्तर D" },
-      edition: "SMK 6.0",
+      edition: CURRENT_EDITION_LABEL,
     },
   ],
   previousPapers: [],
@@ -173,15 +173,15 @@ export const mathematicsOlympiad: OlympiadPortalContent = {
       id: "math-v1",
       title: { en: "Problem-Solving Strategies for Maths Olympiad", hi: "गणित ओलंपियाड समस्या समाधान रणनीति" },
       duration: "40 min",
-      speaker: { en: "DHE Academic Council", hi: "DHE शैक्षिक परिषद" },
+      speaker: { en: "Olympiad Cell, DHE", hi: "ओलंपियाड सेल, DHE" },
     },
   ],
   awards: [
     {
       level: { en: "National Top Achievers", hi: "राष्ट्रीय शीर्ष achievers" },
       description: {
-        en: "Medals, certificates, and felicitation at Shiksha Mahakumbh 6.0, NIT Hamirpur",
-        hi: "पदक, प्रमाणपत्र और SMK 6.0 सम्मान",
+        en: "Medals, certificates, and felicitation at the TEJAS National Felicitation Ceremony",
+        hi: "पदक, प्रमाणपत्र और TEJAS राष्ट्रीय सम्मान",
       },
     },
     {
@@ -203,15 +203,15 @@ export const mathematicsOlympiad: OlympiadPortalContent = {
     {
       question: { en: "When is the DHE Maths Olympiad?", hi: "DHE गणित ओलंपियाड कब है?" },
       answer: {
-        en: "The DHE Maths Olympiad is part of Shiksha Mahakumbh 6.0 outreach. Registration and exam dates will be announced. Felicitation at NIT Hamirpur, 9–11 October 2026.",
-        hi: "शिक्षा महाकुंभ 6.0 का हिस्सा। तिथियाँ घोषित की जाएँगी।",
+        en: "The DHE Maths Olympiad is part of the independent TEJAS Dr APJ Abdul Kalam Edition. Registration and exam dates will be announced.",
+        hi: "स्वतंत्र TEJAS Kalam Edition का हिस्सा। तिथियाँ घोषित की जाएँगी।",
       },
     },
     {
       question: { en: "Which classes can participate?", hi: "कौन सी कक्षाएँ भाग ले सकती हैं?" },
       answer: {
-        en: "Classes III–X as per the Academic Council programme for SMK 6.0 Olympiad streams.",
-        hi: "SMK 6.0 के लिए कक्षा III–X।",
+        en: "Classes III–X in the current independent TEJAS Olympiad cycle.",
+        hi: "वर्तमान स्वतंत्र TEJAS चक्र में कक्षा III–X।",
       },
     },
     {
@@ -262,9 +262,9 @@ export const mathematicsOlympiad: OlympiadPortalContent = {
       status: "tba",
     },
     {
-      label: { en: "Felicitation — SMK 6.0, NIT Hamirpur", hi: "SMK 6.0 सम्मान" },
-      date: "2026-10-09",
-      status: "upcoming",
+      label: { en: "Felicitation — TEJAS National Ceremony", hi: "TEJAS राष्ट्रीय सम्मान" },
+      date: "2026-10-01",
+      status: "tba",
     },
   ],
   hallOfFameHighlights: [],

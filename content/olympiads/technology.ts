@@ -1,5 +1,5 @@
 import type { OlympiadPortalContent } from "@/content/types";
-import { currentCycle } from "@/content/current-cycle";
+import { currentCycle, CURRENT_EDITION_LABEL } from "@/content/current-cycle";
 
 export const technologyOlympiad: OlympiadPortalContent = {
   slug: "technology",
@@ -9,7 +9,7 @@ export const technologyOlympiad: OlympiadPortalContent = {
     hi: "DHE टेक ओलंपियाड — डिजिटल साक्षरता, नवाचार और उभरती प्रौद्योगिकियाँ",
   },
   description: {
-    en: "The DHE Tech Olympiad assesses digital literacy, computational thinking, and awareness of emerging technologies. One of three nationwide Olympiad streams under Shiksha Mahakumbh 6.0 for Classes III–X.",
+    en: "The DHE Tech Olympiad assesses digital literacy, computational thinking, and awareness of emerging technologies. One of three nationwide Olympiad streams in the independent TEJAS Dr APJ Abdul Kalam Edition for Classes III–X.",
     hi: "DHE टेक ओलंपियाड डिजिटल साक्षरता, computational thinking और उभरती प्रौद्योगिकियों की जागरूकता का मूल्यांकन करता है।",
   },
   whySubject: {
@@ -154,7 +154,7 @@ export const technologyOlympiad: OlympiadPortalContent = {
       title: { en: "Sample Paper — Level D", hi: "नमूना प्रश्नपत्र — स्तर D" },
       year: 2026,
       level: { en: "Level D", hi: "स्तर D" },
-      edition: "SMK 6.0",
+      edition: CURRENT_EDITION_LABEL,
     },
   ],
   previousPapers: [],
@@ -170,8 +170,8 @@ export const technologyOlympiad: OlympiadPortalContent = {
     {
       level: { en: "National Top Achievers", hi: "राष्ट्रीय शीर्ष achievers" },
       description: {
-        en: "Felicitation at Shiksha Mahakumbh 6.0 with medals and certificates",
-        hi: "SMK 6.0 में पदक और प्रमाणपत्र",
+        en: "Felicitation at the TEJAS National Felicitation Ceremony with medals and certificates",
+        hi: "TEJAS राष्ट्रीय सम्मान में पदक और प्रमाणपत्र",
       },
     },
     {
@@ -200,8 +200,8 @@ export const technologyOlympiad: OlympiadPortalContent = {
     {
       question: { en: "When is the DHE Tech Olympiad?", hi: "DHE टेक ओलंपियाड कब है?" },
       answer: {
-        en: "Part of SMK 6.0 Olympiad streams. Dates to be announced. Top achievers felicitated at NIT Hamirpur, 9–11 October 2026.",
-        hi: "SMK 6.0 का हिस्सा। तिथियाँ घोषित की जाएँगी।",
+        en: "Part of the independent TEJAS Dr APJ Abdul Kalam Edition. Dates to be announced.",
+        hi: "स्वतंत्र TEJAS Kalam Edition का हिस्सा। तिथियाँ घोषित की जाएँगी।",
       },
     },
   ],
@@ -244,9 +244,9 @@ export const technologyOlympiad: OlympiadPortalContent = {
       status: "tba",
     },
     {
-      label: { en: "Felicitation — SMK 6.0, NIT Hamirpur", hi: "SMK 6.0 सम्मान" },
-      date: "2026-10-09",
-      status: "upcoming",
+      label: { en: "Felicitation — TEJAS National Ceremony", hi: "TEJAS राष्ट्रीय सम्मान" },
+      date: "2026-10-01",
+      status: "tba",
     },
   ],
   hallOfFameHighlights: [],

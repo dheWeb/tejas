@@ -1,5 +1,5 @@
 import type { OlympiadPortalContent } from "@/content/types";
-import { currentCycle, pastEnglishOlympiad2025 } from "@/content/current-cycle";
+import { currentCycle, pastEnglishOlympiad2025, CURRENT_EDITION_LABEL } from "@/content/current-cycle";
 
 export const englishOlympiad: OlympiadPortalContent = {
   slug: "english",
@@ -13,8 +13,8 @@ export const englishOlympiad: OlympiadPortalContent = {
     hi: "भाषा केवल संचार का माध्यम नहीं; यह अभिव्यक्ति, रचनात्मकता और आत्मविश्वास की नींव है। DHE अंग्रेज़ी ओलंपियाड शब्दावली, व्याकरण, पठन बोध और रचनात्मक भाषा उपयोग को मजबूत करता है।",
   },
   whySubject: {
-    en: "Proficiency in English enables students to articulate ideas globally while remaining rooted in Bharatiya values. From the success of the 1st DHE English Olympiad (10,040+ students, 25 schools), Olympiad Cell is expanding nationwide under Shiksha Mahakumbh 6.0.",
-    hi: "अंग्रेज़ी में दक्षता छात्रों को भारतीय मूल्यों में निहित रहते हुए वैश्विक स्तर पर विचार व्यक्त करने में सक्षम बनाती है। प्रथम DHE अंग्रेज़ी ओलंपियाड की सफलता के बाद, ओलंपियाड सेल शिक्षा महाकुंभ 6.0 के तहत राष्ट्रव्यापी विस्तार कर रहा है।",
+    en: "Proficiency in English enables students to articulate ideas globally while remaining rooted in Bharatiya values. From the success of the 1st DHE English Olympiad (10,040+ students, 25 schools), Olympiad Cell is expanding nationwide through the independent TEJAS Dr APJ Abdul Kalam Edition — held after Shiksha Mahakumbh.",
+    hi: "अंग्रेज़ी में दक्षता छात्रों को भारतीय मूल्यों में निहित रहते हुए वैश्विक स्तर पर विचार व्यक्त करने में सक्षम बनाती है। प्रथम DHE अंग्रेज़ी ओलंपियाड की सफलता के बाद, ओलंपियाड सेल स्वतंत्र TEJAS Kalam Edition के माध्यम से राष्ट्रव्यापी विस्तार कर रहा है।",
   },
   status: "active",
   icon: "book-open",
@@ -30,8 +30,8 @@ export const englishOlympiad: OlympiadPortalContent = {
       hi: "भारत भर के मान्यता प्राप्त विद्यालयों में नामांकित विद्यार्थी",
     },
     {
-      en: "Grade range: Classes III–X (SMK 6.0 cycle)",
-      hi: "कक्षा सीमा: कक्षा III–X (SMK 6.0 चक्र)",
+      en: "Grade range: Classes III–X (Current TEJAS Edition)",
+      hi: "कक्षा सीमा: कक्षा III–X (वर्तमान TEJAS संस्करण)",
     },
     {
       en: "School registration through Olympiad Cell, DHE official channels",
@@ -188,14 +188,14 @@ export const englishOlympiad: OlympiadPortalContent = {
       title: { en: "Sample Paper — Level B", hi: "नमूना प्रश्नपत्र — स्तर B" },
       year: 2026,
       level: { en: "Level B — Classes III–IV", hi: "स्तर B" },
-      edition: "SMK 6.0",
+      edition: CURRENT_EDITION_LABEL,
     },
     {
       id: "eng-sample-d",
       title: { en: "Sample Paper — Level D", hi: "नमूना प्रश्नपत्र — स्तर D" },
       year: 2026,
       level: { en: "Level D — Classes VII–VIII", hi: "स्तर D" },
-      edition: "SMK 6.0",
+      edition: CURRENT_EDITION_LABEL,
     },
   ],
   previousPapers: [
@@ -212,7 +212,7 @@ export const englishOlympiad: OlympiadPortalContent = {
       id: "eng-v1",
       title: { en: "English Olympiad Strategy — Olympiad Cell", hi: "अंग्रेज़ी ओलंपियाड रणनीति" },
       duration: "45 min",
-      speaker: { en: "DHE Academic Council", hi: "DHE शैक्षिक परिषद" },
+      speaker: { en: "Olympiad Cell, DHE", hi: "ओलंपियाड सेल, DHE" },
     },
     {
       id: "eng-v2",
@@ -244,10 +244,10 @@ export const englishOlympiad: OlympiadPortalContent = {
       },
     },
     {
-      level: { en: "SMK 6.0 Felicitation", hi: "SMK 6.0 सम्मान" },
+      level: { en: "TEJAS National Felicitation", hi: "TEJAS राष्ट्रीय सम्मान" },
       description: {
-        en: "Top achievers honoured at NIT Hamirpur, 9–11 October 2026",
-        hi: "शीर्ष achievers को NIT Hamirpur में 9–11 अक्टूबर 2026 को सम्मान",
+        en: "Top achievers honoured at the TEJAS National Felicitation Ceremony — independent event, details TBA",
+        hi: "TEJAS राष्ट्रीय सम्मान समारोह में शीर्ष achievers",
       },
     },
   ],
@@ -268,8 +268,8 @@ export const englishOlympiad: OlympiadPortalContent = {
         hi: "अगला DHE अंग्रेज़ी ओलंपियाड कब है?",
       },
       answer: {
-        en: "DHE English Olympiad 2.0 is planned under Shiksha Mahakumbh 6.0 (2026). Registration and exam dates will be announced. Top achievers will be felicitated at NIT Hamirpur, 9–11 October 2026.",
-        hi: "DHE English Olympiad 2.0 शिक्षा महाकुंभ 6.0 (2026) के तहत। पंजीकरण और परीक्षा तिथियाँ घोषित की जाएँगी।",
+        en: "DHE English Olympiad 2.0 is part of the independent TEJAS Dr APJ Abdul Kalam Edition (2026), held after Shiksha Mahakumbh. Registration and exam dates will be announced.",
+        hi: "DHE English Olympiad 2.0 स्वतंत्र TEJAS Kalam Edition (2026) का हिस्सा है। पंजीकरण और परीक्षा तिथियाँ घोषित की जाएँगी।",
       },
     },
     {
@@ -368,9 +368,9 @@ export const englishOlympiad: OlympiadPortalContent = {
       status: "tba",
     },
     {
-      label: { en: "Top Achievers Felicitation — SMK 6.0, NIT Hamirpur", hi: "SMK 6.0 सम्मान" },
-      date: "2026-10-09",
-      status: "upcoming",
+      label: { en: "Top Achievers Felicitation — TEJAS National Ceremony", hi: "TEJAS राष्ट्रीय सम्मान" },
+      date: "2026-10-01",
+      status: "tba",
     },
   ],
   hallOfFameHighlights: [

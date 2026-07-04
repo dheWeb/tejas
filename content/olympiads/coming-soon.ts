@@ -63,8 +63,8 @@ export function createComingSoonOlympiad(config: ComingSoonConfig): OlympiadPort
       {
         question: ls(`When will the ${config.name.en} Olympiad launch?`, `${config.name.hi} ओलंपियाड कब लॉन्च होगा?`),
         answer: ls(
-          "This stream is part of TEJAS expansion roadmap. DHE Sanskriti Olympiad and additional subjects are planned after the SMK 6.0 core streams (English, Maths, Technology).",
-          "यह TEJAS विस्तार roadmap का हिस्सा है। SMK 6.0 core streams के बाद अतिरिक्त विषय।"
+          "This stream is part of TEJAS expansion roadmap. DHE Sanskriti Olympiad and additional subjects are planned after the current core streams (English, Maths, Technology).",
+          "यह TEJAS विस्तार roadmap का हिस्सा है। वर्तमान core streams के बाद अतिरिक्त विषय।"
         ),
       },
     ],
@@ -119,7 +119,7 @@ export const sanskritOlympiad = createComingSoonOlympiad({
     "DHE Sanskriti Olympiad — संस्कृत व्याकरण, श्लोक और IKS से जुड़ाव।"
   ),
   whySubject: ls(
-    "Sanskrit is the gateway to Bharat's ancient wisdom. DHE plans Sanskriti Olympiad as part of its expansion under Shiksha Mahakumbh.",
+    "Sanskrit is the gateway to Bharat's ancient wisdom. DHE plans Sanskriti Olympiad as part of TEJAS expansion.",
     "संस्कृत प्राचीन ज्ञान का द्वार है। DHE Sanskriti Olympiad की योजना।"
   ),
   icon: "scroll",

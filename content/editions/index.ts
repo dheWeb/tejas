@@ -110,12 +110,12 @@ export const apjAbdulKalam2026Edition: EditionFullContent = {
     hi: "डॉ APJ अब्दुल कलाम संस्करण",
   },
   subtitle: {
-    en: "Igniting Young Minds — SMK 6.0 Olympiad Cycle",
-    hi: "युवा मन को प्रज्वलित करना — SMK 6.0 ओलंपियाड चक्र",
+    en: "Igniting Young Minds — Independent TEJAS Olympiad Cycle",
+    hi: "युवा मन को प्रज्वलित करना — स्वतंत्र TEJAS ओलंपियाड चक्र",
   },
   bio: {
-    en: "Honouring Bharat's Missile Man — a visionary scientist, teacher, and President who inspired generations to dream big and serve the nation through science and innovation. The 2026 TEJAS edition aligns with Shiksha Mahakumbh 6.0 and the three-stream DHE Olympiad outreach: English, Maths, and Technology for Classes III–X.",
-    hi: "भारत के मिसाइल मैन का सम्मान — SMK 6.0 के तहत English, Maths और Technology ओलंपियाड।",
+    en: "Honouring Bharat's Missile Man — a visionary scientist, teacher, and President who inspired generations to dream big and serve the nation through science and innovation. The 2026 TEJAS edition is an independent DHE Olympiad initiative by Olympiad Cell — conducted after Shiksha Mahakumbh, not under its aegis — featuring English, Maths, and Technology Olympiads for Classes III–X.",
+    hi: "भारत के मिसाइल मैन का सम्मान — शिक्षा महाकुंभ के बाद स्वतंत्र TEJAS ओलंपियाड चक्र।",
   },
   theme: {
     en: "Dream. Discover. Deliver.",
@@ -123,7 +123,6 @@ export const apjAbdulKalam2026Edition: EditionFullContent = {
   },
   status: "current",
   imageAccent: "#E85D04",
-  smkEdition: 6,
   vision: {
     en: "To ignite scientific temper, innovation, and national service among Bharat's young learners — following Dr Kalam's belief that dreams transform into thoughts, and thoughts result in action.",
     hi: "Dr Kalam की शिक्षा — सपने विचारों में, विचार कर्म में बदलते हैं।",
@@ -183,33 +182,40 @@ export const apjAbdulKalam2026Edition: EditionFullContent = {
   stats: [
     { label: { en: "Olympiad Streams", hi: "ओलंपियाड streams" }, value: "3" },
     { label: { en: "Classes", hi: "कक्षाएँ" }, value: "III–X" },
-    { label: { en: "SMK Summit", hi: "SMK शिखर सम्मेलन" }, value: "9–11 Oct 2026" },
-    { label: { en: "Venue", hi: "स्थान" }, value: "NIT Hamirpur" },
+    { label: { en: "Format", hi: "प्रारूप" }, value: "Independent" },
+    { label: { en: "Platform", hi: "मंच" }, value: "TEJAS" },
   ],
   felicitation: {
-    en: "Top achievers honoured at Shiksha Mahakumbh 6.0, 9–11 October 2026, NIT Hamirpur",
-    hi: "SMK 6.0, NIT Hamirpur में सम्मान",
+    en: "Top achievers honoured at the TEJAS National Felicitation Ceremony — an independent event (details to be announced)",
+    hi: "TEJAS राष्ट्रीय सम्मान समारोह — स्वतंत्र कार्यक्रम",
   },
   faqs: [
     {
       question: { en: "Which Olympiads are part of this edition?", hi: "इस संस्करण में कौन से ओलंपियाड?" },
       answer: {
-        en: "Three streams: DHE English Olympiad 2.0, DHE Maths Olympiad, and DHE Tech Olympiad for Classes III–X, as per the Academic Council programme for Shiksha Mahakumbh 6.0.",
-        hi: "तीन streams: English, Maths, Technology — कक्षा III–X।",
+        en: "Three streams: DHE English Olympiad 2.0, DHE Maths Olympiad, and DHE Tech Olympiad for Classes III–X. This is an independent TEJAS edition by Olympiad Cell, DHE — not conducted under Shiksha Mahakumbh.",
+        hi: "तीन streams: English, Maths, Technology — कक्षा III–X। स्वतंत्र TEJAS संस्करण।",
+      },
+    },
+    {
+      question: { en: "How is this different from Shiksha Mahakumbh Olympiads?", hi: "यह शिक्षा महाकुंभ ओलंपियाड से कैसे अलग है?" },
+      answer: {
+        en: "The 1st DHE English Olympiad (2025) was under Shiksha Mahakumbh 5th Edition. The current Dr APJ Abdul Kalam Edition is an independent TEJAS Olympiad cycle held after Shiksha Mahakumbh, administered directly by Olympiad Cell, DHE.",
+        hi: "2025 का English Olympiad SMK 5th Edition के तहत था। वर्तमान संस्करण स्वतंत्र TEJAS चक्र है।",
       },
     },
     {
       question: { en: "When is registration opening?", hi: "पंजीकरण कब?" },
       answer: {
-        en: "Registration and exam dates to be announced. Apply via the unified registration hub when open.",
+        en: "Registration and exam dates to be announced. Schools may register through Olympiad Cell, DHE official channels.",
         hi: "पंजीकरण और परीक्षा तिथियाँ घोषित की जाएँगी।",
       },
     },
   ],
   downloads: [
     {
-      title: { en: "SMK 6.0 Edition Brochure", hi: "SMK 6.0 ब्रोशर" },
-      description: { en: "Official Shiksha Mahakumbh 6.0 programme brochure", hi: "आधिकारिक ब्रोशर" },
+      title: { en: "Kalam Edition 2026 Brochure", hi: "Kalam Edition 2026 ब्रोशर" },
+      description: { en: "Official TEJAS Dr APJ Abdul Kalam Edition programme brochure", hi: "आधिकारिक TEJAS ब्रोशर" },
       type: "PDF",
     },
     {
@@ -220,7 +226,7 @@ export const apjAbdulKalam2026Edition: EditionFullContent = {
   ],
   galleryCaptions: [
     { en: "Dr APJ Abdul Kalam with students — the spirit of TEJAS", hi: "Dr Kalam छात्रों के साथ" },
-    { en: "Shiksha Mahakumbh 6.0 — NIT Hamirpur summit", hi: "SMK 6.0 — NIT Hamirpur" },
+    { en: "TEJAS National Felicitation — independent ceremony", hi: "TEJAS राष्ट्रीय सम्मान समारोह" },
   ],
 };
 
