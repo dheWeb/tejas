@@ -1,9 +1,10 @@
 import type { Metric } from "@/types";
 
+/** Real metrics from 1st DHE English Olympiad + SMK 6.0 expansion */
 export const impactMetrics: Metric[] = [
-  { label: "Students", value: 2500000, suffix: "+", icon: "users" },
-  { label: "Schools", value: 12000, suffix: "+", icon: "school" },
-  { label: "States & UTs", value: 36, icon: "map" },
-  { label: "Olympiads", value: 10, icon: "trophy" },
-  { label: "Certificates", value: 1800000, suffix: "+", icon: "award" },
+  { label: "Students (English 2025)", value: 10040, suffix: "+", icon: "users" },
+  { label: "Partner Schools", value: 25, suffix: "+", icon: "school" },
+  { label: "Regions Covered", value: 3, icon: "map" },
+  { label: "Active Olympiad Streams", value: 3, icon: "trophy" },
+  { label: "Exam Levels", value: 5, icon: "award" },
 ];

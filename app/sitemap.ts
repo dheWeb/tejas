@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/seo";
-import { getAllOlympiadSlugs } from "@/data/olympiad-details";
+import { getAllOlympiadSlugs } from "@/content/olympiads";
+import { getAllEditionSlugs } from "@/content/editions";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
@@ -33,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 0.7,
+    })),
+    ...getAllEditionSlugs().map((slug) => ({
+      url: `${base}/editions/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
     })),
   ];
 }

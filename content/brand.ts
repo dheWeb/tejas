@@ -1,13 +1,17 @@
 import { brand } from "@/design-system/tokens";
 
 export const brandContent = {
+  fullName: {
+    en: "Talent Evaluation & Joint Assessment Series",
+    hi: "प्रतिभा मूल्यांकन एवं संयुक्त आकलन श्रृंखला",
+  },
   movement: {
     en: brand.movement,
     hi: "केवल एक परीक्षा नहीं, बल्कि प्रतिभा, अनुसंधान, नवाचार और राष्ट्र निर्माण के लिए एक राष्ट्रीय आंदोलन",
   },
   ecosystem: {
-    en: "Bharat's Future National Talent Development Ecosystem",
-    hi: "भारत का भविष्य राष्ट्रीय प्रतिभा विकास पारिस्थितिकी तंत्र",
+    en: "National Talent Development Ecosystem",
+    hi: "राष्ट्रीय प्रतिभा विकास पारिस्थितिकी तंत्र",
   },
   vision: {
     en: "Every student should grow not merely as an examinee, but as a researcher, innovator, entrepreneur, responsible citizen, future leader, and nation builder.",

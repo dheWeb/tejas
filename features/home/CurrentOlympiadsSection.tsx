@@ -3,34 +3,44 @@ import { ArrowRight } from "lucide-react";
 import { OlympiadCard } from "@/components/shared/OlympiadCard";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { FadeIn } from "@/components/shared/FadeIn";
-import { olympiads } from "@/data/olympiads";
+import { getActiveOlympiads, olympiads } from "@/data/olympiads";
 
 export function CurrentOlympiadsSection() {
+  const active = getActiveOlympiads();
+  const comingSoonCount = olympiads.filter((o) => o.status === "coming-soon").length;
+
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <SectionHeader
-            eyebrow="Olympiads"
-            title="Current Olympiads"
-            subtitle="Ten subjects. One national platform. Every student deserves to be discovered."
+            eyebrow="Shiksha Mahakumbh 6.0"
+            title="Active Olympiad Streams"
+            subtitle="DHE English, Maths & Technology Olympiads for Classes III–X. Felicitation at NIT Hamirpur, 9–11 Oct 2026."
           />
         </FadeIn>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          {olympiads.map((o, i) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {active.map((o, i) => (
             <FadeIn key={o.slug} delay={i * 0.04}>
-              <OlympiadCard {...o} />
+              <OlympiadCard {...o} status="active" registrationOpen={false} />
             </FadeIn>
           ))}
         </div>
         <FadeIn delay={0.2}>
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
             <Link
               href="/olympiads"
               className="inline-flex items-center gap-2 font-semibold text-tejas-saffron hover:underline"
             >
-              View all olympiads
+              View all {olympiads.length} olympiad streams ({comingSoonCount} coming soon)
               <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+            <Link
+              href="/editions/apj-abdul-kalam"
+              className="inline-flex items-center gap-2 text-sm font-medium text-tejas-muted hover:text-tejas-saffron"
+            >
+              Dr APJ Abdul Kalam Edition 2026
+              <ArrowRight className="h-3 w-3" aria-hidden />
             </Link>
           </div>
         </FadeIn>

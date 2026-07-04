@@ -10,6 +10,7 @@ export interface Olympiad {
   questions: number;
   registrationOpen: boolean;
   examDate?: string;
+  status?: "active" | "coming-soon" | "past";
 }
 
 export interface Edition {
@@ -40,12 +41,13 @@ export interface HallOfFameEntry {
   id: string;
   name: string;
   rank: number;
-  category: "national" | "state" | "school";
+  category: "national" | "state" | "school" | "teacher" | "innovation" | "research" | "young-scientist" | "young-innovator" | "project";
   olympiad: string;
   state?: string;
   school?: string;
   year: number;
   achievement: string;
+  level?: string;
 }
 
 export interface RankingRow {
@@ -60,7 +62,7 @@ export interface RankingRow {
 export interface Resource {
   id: string;
   title: string;
-  type: "pdf" | "video" | "article" | "practice";
+  type: "pdf" | "video" | "article" | "practice" | "book";
   subject: string;
   description: string;
   href: string;

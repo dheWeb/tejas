@@ -1,138 +1,31 @@
 import type { Olympiad } from "@/types";
+import { olympiadRegistry } from "@/content/olympiads";
 
-export const olympiads: Olympiad[] = [
-  {
-    slug: "mathematics",
-    name: "Mathematics",
-    nameHi: "गणित",
-    description: "Logical reasoning, problem-solving, and mathematical excellence.",
-    icon: "calculator",
-    color: "#1E3A5F",
-    grades: "Classes 1–12",
-    duration: "60 min",
-    questions: 50,
-    registrationOpen: true,
-    examDate: "2027-11-15",
-  },
-  {
-    slug: "science",
-    name: "Science",
-    nameHi: "विज्ञान",
-    description: "Physics, chemistry, biology, and scientific inquiry.",
-    icon: "flask",
-    color: "#059669",
-    grades: "Classes 1–12",
-    duration: "60 min",
-    questions: 50,
-    registrationOpen: true,
-    examDate: "2027-11-16",
-  },
-  {
-    slug: "technology",
-    name: "Technology",
-    nameHi: "प्रौद्योगिकी",
-    description: "Digital literacy, innovation, and emerging technologies.",
-    icon: "cpu",
-    color: "#6366F1",
-    grades: "Classes 6–12",
-    duration: "45 min",
-    questions: 40,
-    registrationOpen: true,
-    examDate: "2027-11-17",
-  },
-  {
-    slug: "english",
-    name: "English",
-    nameHi: "अंग्रेज़ी",
-    description: "Reading comprehension, grammar, and communication skills.",
-    icon: "book-open",
-    color: "#E85D04",
-    grades: "Classes 1–12",
-    duration: "60 min",
-    questions: 50,
-    registrationOpen: true,
-    examDate: "2027-11-18",
-  },
-  {
-    slug: "hindi",
-    name: "Hindi",
-    nameHi: "हिंदी",
-    description: "Language proficiency, literature, and cultural expression.",
-    icon: "languages",
-    color: "#DC2626",
-    grades: "Classes 1–12",
-    duration: "60 min",
-    questions: 50,
-    registrationOpen: true,
-    examDate: "2027-11-19",
-  },
-  {
-    slug: "sanskrit",
-    name: "Sanskrit",
-    nameHi: "संस्कृत",
-    description: "Classical language, grammar, and Bharatiya knowledge traditions.",
-    icon: "scroll",
-    color: "#D4A017",
-    grades: "Classes 5–12",
-    duration: "45 min",
-    questions: 40,
-    registrationOpen: true,
-    examDate: "2027-11-20",
-  },
-  {
-    slug: "general-knowledge",
-    name: "General Knowledge",
-    nameHi: "सामान्य ज्ञान",
-    description: "Current affairs, geography, history, and civic awareness.",
-    icon: "globe",
-    color: "#0EA5E9",
-    grades: "Classes 3–12",
-    duration: "45 min",
-    questions: 40,
-    registrationOpen: true,
-    examDate: "2027-11-21",
-  },
-  {
-    slug: "ai",
-    name: "AI & Data Science",
-    nameHi: "कृत्रिम बुद्धिमत्ता",
-    description: "Foundations of AI, ethics, and data-driven thinking.",
-    icon: "brain",
-    color: "#8B5CF6",
-    grades: "Classes 8–12",
-    duration: "45 min",
-    questions: 35,
-    registrationOpen: true,
-    examDate: "2027-11-22",
-  },
-  {
-    slug: "coding",
-    name: "Coding",
-    nameHi: "कोडिंग",
-    description: "Computational thinking, algorithms, and programming logic.",
-    icon: "code",
-    color: "#14B8A6",
-    grades: "Classes 6–12",
-    duration: "60 min",
-    questions: 30,
-    registrationOpen: true,
-    examDate: "2027-11-23",
-  },
-  {
-    slug: "innovation",
-    name: "Innovation",
-    nameHi: "नवाचार",
-    description: "Design thinking, entrepreneurship, and creative problem-solving.",
-    icon: "lightbulb",
-    color: "#F59E0B",
-    grades: "Classes 9–12",
-    duration: "90 min",
-    questions: 25,
-    registrationOpen: true,
-    examDate: "2027-11-24",
-  },
-];
+function mapToOlympiad(o: (typeof olympiadRegistry)[number]): Olympiad {
+  return {
+    slug: o.slug,
+    name: o.name.en,
+    nameHi: o.name.hi,
+    description: o.description.en,
+    icon: o.icon,
+    color: o.color,
+    grades: o.grades.en,
+    duration: o.duration.en,
+    questions: o.questions,
+    registrationOpen: o.registrationOpen,
+    examDate: o.examDate,
+    status: o.status,
+  };
+}
+
+export const olympiads: Olympiad[] = olympiadRegistry.map(mapToOlympiad);
+
+export function getActiveOlympiads(): Olympiad[] {
+  return olympiadRegistry.filter((o) => o.status === "active").map(mapToOlympiad);
+}
 
 export function getOlympiadBySlug(slug: string) {
   return olympiads.find((o) => o.slug === slug);
 }
+
+export const activeOlympiadSlugs = ["english", "mathematics", "technology"] as const;

@@ -3,19 +3,19 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import type { HallOfFameEntry } from "@/types";
 
-const categoryIcons = {
-  national: Trophy,
-  state: Medal,
-  school: SchoolIcon,
-};
-
 interface HallOfFameCardProps {
   entry: HallOfFameEntry;
   className?: string;
 }
 
+const categoryIcons: Record<string, typeof Trophy> = {
+  national: Trophy,
+  state: Medal,
+  school: SchoolIcon,
+};
+
 export function HallOfFameCard({ entry, className }: HallOfFameCardProps) {
-  const Icon = categoryIcons[entry.category];
+  const Icon = categoryIcons[entry.category] ?? Trophy;
 
   return (
     <article

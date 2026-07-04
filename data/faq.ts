@@ -5,48 +5,60 @@ export const faqItems: FAQItem[] = [
     category: "General",
     question: "What is TEJAS?",
     answer:
-      "TEJAS (Talent Evaluation & Joint Assessment Series) is Bharat's national talent development ecosystem by the Department of Holistic Education. It offers olympiads, assessments, preparation resources, scholarships, and recognition pathways for students across Bharat.",
+      "TEJAS (Talent Evaluation & Joint Assessment Series) is Bharat's National Talent Development Ecosystem by the Olympiad Cell, Department of Holistic Education (DHE). Olympiads are one vertical — alongside research, innovation, learning, scholarships, and Hall of Fame.",
   },
   {
     category: "General",
-    question: "Is TEJAS the same as the DHE website?",
+    question: "What is the relationship between TEJAS and Shiksha Mahakumbh?",
     answer:
-      "TEJAS is a dedicated platform powered by DHE — engineered as an independent product at tejas.dhe.org.in, similar to how Google Classroom operates under Google but as its own application.",
+      "DHE Olympiads are conducted under the aegis of Shiksha Mahakumbh Abhiyan. The 1st DHE English Olympiad was under SMK 5.0 (2025). SMK 6.0 (9–11 Oct 2026, NIT Hamirpur) features three Olympiad streams: English, Maths, and Technology for Classes III–X.",
+  },
+  {
+    category: "General",
+    question: "What was the 1st DHE English Olympiad?",
+    answer:
+      "Conducted 13–16 October 2025 across 25 schools in Punjab, Haryana and Chandigarh with 10,040+ students (Classes I–X). Organised by Olympiad Cell, DHE in collaboration with English Connection. MCQ format with OMR sheets. Overall toppers felicitated at SMK 5.0, NIPER Mohali (1 Nov 2025).",
+  },
+  {
+    category: "Olympiads",
+    question: "Which Olympiads are active for SMK 6.0?",
+    answer:
+      "Three streams: DHE English Olympiad 2.0, DHE Maths Olympiad, and DHE Tech Olympiad for Classes III–X. Registration and exam dates to be announced. Top achievers felicitated at NIT Hamirpur, 9–11 October 2026.",
   },
   {
     category: "Registration",
-    question: "How do students register for olympiads?",
+    question: "How do schools participate?",
     answer:
-      "Registration will open through school coordinators and individual enrollment. Phase 0 displays the experience only — live registration will be available in a future release.",
-  },
-  {
-    category: "Registration",
-    question: "Can schools register in bulk?",
-    answer:
-      "Yes. Schools can register their students through the School Portal (coming soon). Visit the Schools page to learn about partnership tiers and benefits.",
+      "Schools register through Olympiad Cell, DHE official communication channels. Contact olympiad@shikshamahakumbh.com or academics@shikshamahakumbh.com for collaboration.",
   },
   {
     category: "Exams",
-    question: "Are TEJAS olympiads online or offline?",
+    question: "What is the exam format?",
     answer:
-      "TEJAS supports both online and offline modes depending on the edition and subject. Exam mode details are published on each olympiad page before registration closes.",
+      "MCQ format using OMR sheets — ensuring transparency, objectivity, and fairness. Five examination levels (A–E) based on class groups. No negative marking in DHE English Olympiad.",
   },
   {
     category: "Exams",
-    question: "Is there negative marking?",
+    question: "What are the examination levels?",
     answer:
-      "Marking schemes vary by subject and grade. Official exam patterns are published on each olympiad detail page before the examination date.",
+      "Level A: Class I–II, Level B: Class III–IV, Level C: Class V–VI, Level D: Class VII–VIII, Level E: Class IX–X. SMK 6.0 active streams focus on Classes III–X (Levels B–E).",
+  },
+  {
+    category: "Awards",
+    question: "What awards do winners receive?",
+    answer:
+      "Overall and school-wise top 3 at each level receive medals, certificates, and book sets. All participants receive digital certificates with QR verification. Top achievers are felicitated at Shiksha Mahakumbh.",
   },
   {
     category: "Preparation",
-    question: "Are mock tests free?",
+    question: "Are mock tests and resources free?",
     answer:
-      "Yes. TEJAS offers free mock tests and practice resources through the Prepare Hub to help every student prepare with confidence.",
+      "Yes. TEJAS provides sample papers, mock test previews, preparation roadmaps, teacher/parent/school guides, and books through the Prepare Hub and Resources section.",
   },
   {
-    category: "Results",
-    question: "How are certificates verified?",
+    category: "Future",
+    question: "What Olympiads are planned next?",
     answer:
-      "Every TEJAS certificate includes a unique verification code and QR code. Certificate verification will be available on this platform in a future release.",
+      "After SMK 6.0 core streams, DHE plans DHE Sanskriti Olympiad and expansion to Science, Hindi, Sanskrit, GK, AI, Coding, and Innovation under the TEJAS ecosystem.",
   },
 ];

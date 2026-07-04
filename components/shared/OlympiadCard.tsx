@@ -37,6 +37,7 @@ interface OlympiadCardProps {
   color: string;
   grades: string;
   registrationOpen?: boolean;
+  status?: "active" | "coming-soon" | "past";
   className?: string;
 }
 
@@ -49,6 +50,7 @@ export function OlympiadCard({
   color,
   grades,
   registrationOpen = true,
+  status,
   className,
 }: OlympiadCardProps) {
   const Icon = iconMap[icon] ?? BookOpen;
@@ -68,7 +70,13 @@ export function OlympiadCard({
         >
           <Icon className="h-6 w-6" aria-hidden />
         </div>
-        {registrationOpen && <Badge variant="success">Open</Badge>}
+        {status === "active" ? (
+          <Badge variant="success">SMK 6.0</Badge>
+        ) : status === "coming-soon" ? (
+          <Badge variant="outline">Coming Soon</Badge>
+        ) : registrationOpen ? (
+          <Badge variant="success">Open</Badge>
+        ) : null}
       </div>
       <h3 className="mt-4 text-lg font-bold text-tejas-ink group-hover:text-tejas-saffron transition-colors">
         {name}

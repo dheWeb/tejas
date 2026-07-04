@@ -3,20 +3,21 @@ import { FileText, Video, BookOpen, PenLine, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Resource } from "@/types";
 
-const typeIcons = {
-  pdf: FileText,
-  video: Video,
-  article: BookOpen,
-  practice: PenLine,
-};
-
 interface ResourceCardProps {
   resource: Resource;
   className?: string;
 }
 
+const typeIcons: Record<Resource["type"], typeof FileText> = {
+  pdf: FileText,
+  video: Video,
+  article: BookOpen,
+  practice: PenLine,
+  book: BookOpen,
+};
+
 export function ResourceCard({ resource, className }: ResourceCardProps) {
-  const Icon = typeIcons[resource.type];
+  const Icon = typeIcons[resource.type] ?? FileText;
 
   return (
     <Link

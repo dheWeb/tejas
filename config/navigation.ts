@@ -32,10 +32,10 @@ export const mainNav: NavItem[] = [
         title: "Core Subjects",
         titleHi: "मुख्य विषय",
         items: [
-          { label: "Mathematics", labelHi: "गणित", href: "/olympiads/mathematics", description: "Logical reasoning & problem-solving" },
-          { label: "Science", labelHi: "विज्ञान", href: "/olympiads/science", description: "Scientific inquiry & application" },
-          { label: "English", labelHi: "अंग्रेज़ी", href: "/olympiads/english", description: "Communication excellence" },
-          { label: "Hindi", labelHi: "हिंदी", href: "/olympiads/hindi", description: "Language & literature" },
+          { label: "English", labelHi: "अंग्रेज़ी", href: "/olympiads/english", description: "SMK 6.0 Active Stream", badge: "Active" },
+          { label: "Mathematics", labelHi: "गणित", href: "/olympiads/mathematics", description: "SMK 6.0 Active Stream", badge: "Active" },
+          { label: "Technology", labelHi: "प्रौद्योगिकी", href: "/olympiads/technology", description: "SMK 6.0 Active Stream", badge: "Active" },
+          { label: "Science", labelHi: "विज्ञान", href: "/olympiads/science", description: "Coming soon" },
         ],
       },
       {
@@ -115,10 +115,10 @@ export const footerNav = {
     { label: "Mock Tests", href: "/prepare/mock-tests" },
   ],
   olympiads: [
-    { label: "Mathematics", href: "/olympiads/mathematics" },
-    { label: "Science", href: "/olympiads/science" },
-    { label: "Technology", href: "/olympiads/technology" },
-    { label: "English", href: "/olympiads/english" },
+    { label: "English (Active)", href: "/olympiads/english" },
+    { label: "Mathematics (Active)", href: "/olympiads/mathematics" },
+    { label: "Technology (Active)", href: "/olympiads/technology" },
+    { label: "All Olympiads", href: "/olympiads" },
   ],
   support: [
     { label: "FAQ", href: "/faq" },

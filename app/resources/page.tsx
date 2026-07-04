@@ -3,11 +3,11 @@ import { PageHero } from "@/components/shared/PageHero";
 import { ResourceCard } from "@/components/shared/ResourceCard";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { resources } from "@/data/resources";
+import { resources, resourceCategories, getResourcesByCategory } from "@/data/resources";
 
 export const metadata = createMetadata({
   title: "Resources",
-  description: "Study guides, sample papers, video lessons, and practice materials for TEJAS olympiads.",
+  description: "Books, question banks, practice sets, videos, teacher guides, school resources, downloads, and Bal Shodh Patrika.",
   path: "/resources",
 });
 
@@ -17,21 +17,37 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title="Learning Resources Hub"
-        subtitle="Curated materials to support your olympiad preparation journey."
+        subtitle="Complete learning ecosystem — books, practice, videos, guides, downloads, and research."
         primaryCta={{ label: "Prepare Hub", href: "/prepare" }}
+        secondaryCta={{ label: "Olympiads", href: "/olympiads" }}
       />
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <SectionHeader title="All Resources" subtitle="Sample papers, videos, articles, and practice sets." />
-          </FadeIn>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {resources.map((r, i) => (
-              <FadeIn key={r.id} delay={i * 0.05}>
-                <ResourceCard resource={r} />
-              </FadeIn>
-            ))}
-          </div>
+          {resourceCategories.map((cat, catIndex) => {
+            const items = getResourcesByCategory(cat.id);
+            if (items.length === 0) return null;
+            return (
+              <div key={cat.id} className={catIndex > 0 ? "mt-20" : ""}>
+                <FadeIn>
+                  <SectionHeader title={cat.label.en} subtitle={cat.label.hi} />
+                </FadeIn>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {items.map((r, i) => (
+                    <FadeIn key={r.id} delay={i * 0.04}>
+                      <ResourceCard resource={{
+                        id: r.id,
+                        title: r.title.en,
+                        type: r.type,
+                        subject: r.subject ?? "General",
+                        description: r.description.en,
+                        href: r.href,
+                      }} />
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>
