@@ -1,6 +1,6 @@
 # TEJAS Launch Audit Report
 
-Generated: 2026-07-04T17:17:53.538Z
+Generated: 2026-07-04T17:22:35.042Z
 
 ## Summary
 
@@ -9,7 +9,7 @@ Generated: 2026-07-04T17:17:53.538Z
 | Sitemap crawl | 33/33 URLs return 200 |
 | Redirect chains | 1 redirects detected |
 | Broken links | 0 failures |
-| Structured data pages | 2/4 with JSON-LD |
+| Structured data pages | 4/4 with JSON-LD |
 | Mixed HTTP assets | None |
 
 ## Crawl Results
@@ -53,9 +53,9 @@ Generated: 2026-07-04T17:17:53.538Z
 | Page | Types | Canonical OK |
 |------|-------|--------------|
 | / | Organization, WebSite, FAQPage | ✓ |
-| /about | — | ✓ |
+| /about | Organization, BreadcrumbList | ✓ |
 | /olympiads/english | Course, BreadcrumbList, FAQPage | ✓ |
-| /faq | — | ✓ |
+| /faq | FAQPage, BreadcrumbList | ✓ |
 
 **Validate in Google:** [Rich Results Test](https://search.google.com/test/rich-results?url=https%3A%2F%2Ftejas.dhe.org.in)
 
@@ -64,10 +64,10 @@ Generated: 2026-07-04T17:17:53.538Z
 | Header | Value |
 |--------|-------|
 | strict-transport-security | max-age=63072000 |
-| x-frame-options | missing |
-| x-content-type-options | missing |
-| referrer-policy | missing |
-| permissions-policy | missing |
+| x-frame-options | DENY |
+| x-content-type-options | nosniff |
+| referrer-policy | strict-origin-when-cross-origin |
+| permissions-policy | camera=(), microphone=(), geolocation=(), interest-cohort=() |
 
 Note: HSTS is set by Vercel (`max-age=63072000`). Additional headers configured in `next.config.ts`.
 
