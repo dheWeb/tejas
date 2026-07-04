@@ -21,7 +21,9 @@ export const resourceRegistry: ResourceItem[] = [
   // Articles & Blogs
   { id: "art-nep-olympiad", title: ls("NEP 2020 and Olympiad Culture in Bharat", "NEP 2020 और ओलंपियाड संस्कृति"), description: ls("How competitive assessment aligns with NEP vision", "NEP vision के साथ alignment"), category: "articles", type: "article", href: "#" },
   { id: "blog-eng-tips", title: ls("10 Tips for Reading Comprehension Success", "पठन बोध 10 सुझाव"), description: ls("Expert tips from English Connection", "English Connection सुझाव"), category: "blogs", subject: "English", type: "article", href: "#" },
-  // Teacher Resources
+  // Parent Guide
+  { id: "parent-guide", title: ls("Parent's Guide to TEJAS Olympiads", "TEJAS ओलंपियाड — अभिभावक गाइड"), description: ls("How to support your child — registration, preparation, exam day, and results", "पंजीकरण, तैयारी, परीक्षा दिवस और परिणाम"), category: "parent", type: "pdf", href: "#" },
+  { id: "parent-faq", title: ls("Parent FAQ — Kalam Edition 2026", "अभिभावक FAQ"), description: ls("Common questions on eligibility, fees, and school coordination", "पात्रता, शुल्क और विद्यालय समन्वय"), category: "parent", type: "article", href: "/faq" },
   { id: "tr-guide", title: ls("Teacher's Guide — DHE Olympiads", "शिक्षक गाइड"), description: ls("Complete guide for Olympiad coordinators", "ओलंपियाड समन्वयक गाइड"), category: "teacher", type: "pdf", href: "#" },
   { id: "tr-lesson-plans", title: ls("Weekly Lesson Plans — English Olympiad Prep", "साप्ताहिक lesson plans"), description: ls("6-week classroom preparation plan", "6-सप्ताह कक्षा योजना"), category: "teacher", subject: "English", type: "pdf", href: "#" },
   // School Resources
@@ -44,7 +46,8 @@ export const resourceCategories = [
   { id: "videos", label: ls("Videos", "वीडियो"), icon: "video" },
   { id: "blogs", label: ls("Blogs", "ब्लॉग"), icon: "file-text" },
   { id: "articles", label: ls("Articles", "लेख"), icon: "newspaper" },
-  { id: "teacher", label: ls("Teacher Resources", "शिक्षक संसाधन"), icon: "graduation-cap" },
+  { id: "teacher", label: ls("Teacher Toolkit", "शिक्षक टूलकिट"), icon: "graduation-cap" },
+  { id: "parent", label: ls("Parent Guide", "अभिभावक गाइड"), icon: "users" },
   { id: "school", label: ls("School Resources", "विद्यालय संसाधन"), icon: "school" },
   { id: "downloads", label: ls("Downloads", "डाउनलोड"), icon: "download" },
   { id: "research", label: ls("Research Papers", "शोध पत्र"), icon: "microscope" },

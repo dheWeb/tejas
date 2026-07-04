@@ -94,6 +94,10 @@ export interface OlympiadPortalContent {
   schoolGuide: GuideSection[];
   calendar: CalendarEvent[];
   hallOfFameHighlights: { name: string; school: string; level: LocalizedString; year: number }[];
+  skillsDeveloped: LocalizedString[];
+  learningOutcomes: LocalizedString[];
+  careerPathways: LocalizedString[];
+  sampleQuestions: { question: LocalizedString; hint?: LocalizedString }[];
 }
 
 export interface EditionTimelineEvent {
@@ -142,6 +146,8 @@ export type HallOfFameCategory =
   | "research"
   | "young-scientist"
   | "young-innovator"
+  | "young-author"
+  | "young-technologist"
   | "project";
 
 export interface HallOfFameFullEntry {
@@ -166,6 +172,7 @@ export type ResourceCategory =
   | "blogs"
   | "articles"
   | "teacher"
+  | "parent"
   | "school"
   | "downloads"
   | "research"

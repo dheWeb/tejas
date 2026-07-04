@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
-import { createMetadata } from "@/config/seo";
+import { createMetadata, siteConfig } from "@/config/seo";
 import { getOlympiadContent, getAllOlympiadSlugs } from "@/content/olympiads";
 import { OlympiadPortal } from "@/components/olympiads/OlympiadPortal";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd, courseJsonLd, faqJsonLd } from "@/lib/seo/json-ld";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -16,8 +18,8 @@ export async function generateMetadata({ params }: Props) {
   const olympiad = getOlympiadContent(slug);
   if (!olympiad) return {};
   return createMetadata({
-    title: `${olympiad.name.en} Olympiad`,
-    description: olympiad.description.en,
+    title: `${olympiad.name.en} Olympiad — TEJAS`,
+    description: `${olympiad.tagline.en} ${olympiad.description.en.slice(0, 120)}…`,
     path: `/olympiads/${slug}`,
   });
 }
@@ -27,5 +29,23 @@ export default async function OlympiadDetailPage({ params }: Props) {
   const olympiad = getOlympiadContent(slug);
   if (!olympiad) notFound();
 
-  return <OlympiadPortal olympiad={olympiad} />;
+  const url = `${siteConfig.url}/olympiads/${slug}`;
+  const faqItems = olympiad.faqs.map((f) => ({ question: f.question.en, answer: f.answer.en }));
+
+  return (
+    <>
+      <JsonLd
+        data={[
+          courseJsonLd({ name: `${olympiad.name.en} Olympiad`, description: olympiad.description.en, url }),
+          breadcrumbJsonLd([
+            { name: "Home", url: siteConfig.url },
+            { name: "Olympiads", url: `${siteConfig.url}/olympiads` },
+            { name: `${olympiad.name.en} Olympiad`, url },
+          ]),
+          faqJsonLd(faqItems),
+        ]}
+      />
+      <OlympiadPortal olympiad={olympiad} />
+    </>
+  );
 }

@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/schools",
     "/rankings",
     "/hall-of-fame",
+    "/research",
+    "/innovation",
     "/scholarships",
     "/faq",
     "/contact",

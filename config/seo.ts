@@ -9,7 +9,7 @@ export const siteConfig = {
   fullName: brand.fullName,
   description: defaultDescription,
   url: brand.url,
-  ogImage: "/og/tejas-default.png",
+  ogImage: "/opengraph-image",
   locale: "en_IN",
   alternateLocale: "hi_IN",
 } as const;
@@ -46,11 +46,13 @@ export function createMetadata({
       title: pageTitle,
       description,
       siteName: brand.name,
+      images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: `${brand.name} — ${brand.fullName}` }],
     },
     twitter: {
       card: "summary_large_image",
       title: pageTitle,
       description,
+      images: [siteConfig.ogImage],
     },
     robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
     keywords: [

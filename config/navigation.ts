@@ -22,6 +22,7 @@ export interface NavItem {
   megaMenu?: MegaMenuSection[];
 }
 
+/** Platform-first navigation — TEJAS as ecosystem, Olympiads as one vertical */
 export const mainNav: NavItem[] = [
   {
     label: "Olympiads",
@@ -29,47 +30,50 @@ export const mainNav: NavItem[] = [
     href: "/olympiads",
     megaMenu: [
       {
-        title: "Core Subjects",
-        titleHi: "मुख्य विषय",
+        title: "Active Streams",
+        titleHi: "सक्रिय streams",
         items: [
-          { label: "English", labelHi: "अंग्रेज़ी", href: "/olympiads/english", description: "Current TEJAS Edition", badge: "Active" },
-          { label: "Mathematics", labelHi: "गणित", href: "/olympiads/mathematics", description: "Current TEJAS Edition", badge: "Active" },
-          { label: "Technology", labelHi: "प्रौद्योगिकी", href: "/olympiads/technology", description: "Current TEJAS Edition", badge: "Active" },
-          { label: "Science", labelHi: "विज्ञान", href: "/olympiads/science", description: "Coming soon" },
+          { label: "English", labelHi: "अंग्रेज़ी", href: "/olympiads/english", description: "Kalam Edition 2026", badge: "Active" },
+          { label: "Mathematics", labelHi: "गणित", href: "/olympiads/mathematics", description: "Kalam Edition 2026", badge: "Active" },
+          { label: "Technology", labelHi: "प्रौद्योगिकी", href: "/olympiads/technology", description: "Kalam Edition 2026", badge: "Active" },
         ],
       },
       {
-        title: "Future Skills",
-        titleHi: "भविष्य कौशल",
+        title: "All Subjects",
+        titleHi: "सभी विषय",
         items: [
-          { label: "Technology", href: "/olympiads/technology", description: "Digital literacy & innovation" },
-          { label: "AI & Data Science", href: "/olympiads/ai", description: "Responsible AI foundations", badge: "New" },
-          { label: "Coding", href: "/olympiads/coding", description: "Computational thinking" },
-          { label: "Innovation", href: "/olympiads/innovation", description: "Design thinking & entrepreneurship" },
+          { label: "Science", href: "/olympiads/science", description: "Coming in future edition" },
+          { label: "Hindi", href: "/olympiads/hindi", description: "Language & literature" },
+          { label: "AI & Data Science", href: "/olympiads/ai", description: "Responsible AI" },
+          { label: "View All", href: "/olympiads", description: "10-subject ecosystem" },
         ],
       },
     ],
   },
   {
-    label: "Prepare",
-    labelHi: "तैयारी",
+    label: "Learning",
+    labelHi: "शिक्षण",
     href: "/prepare",
     megaMenu: [
       {
-        title: "Learn & Practice",
+        title: "Prepare",
         items: [
-          { label: "Mock Tests", href: "/prepare/mock-tests", description: "Free full-length simulations" },
-          { label: "Practice Sets", href: "/prepare", description: "Topic-wise drills" },
-          { label: "Question Banks", href: "/prepare", description: "Curated question pools" },
-          { label: "Video Learning", href: "/prepare", description: "Expert masterclasses" },
+          { label: "Prepare Hub", href: "/prepare", description: "Topic-wise drills & strategy" },
+          { label: "Mock Tests", href: "/prepare/mock-tests", description: "Full-length simulations" },
+          { label: "Resources", href: "/resources", description: "Books, videos, downloads" },
         ],
       },
     ],
   },
   {
-    label: "Editions",
-    labelHi: "संस्करण",
-    href: "/editions",
+    label: "Research",
+    labelHi: "अनुसंधान",
+    href: "/research",
+  },
+  {
+    label: "Innovation",
+    labelHi: "नवाचार",
+    href: "/innovation",
   },
   {
     label: "Resources",
@@ -80,11 +84,6 @@ export const mainNav: NavItem[] = [
     label: "Schools",
     labelHi: "विद्यालय",
     href: "/schools",
-  },
-  {
-    label: "Rankings",
-    labelHi: "रैंकिंग",
-    href: "/rankings",
   },
   {
     label: "Hall of Fame",
@@ -101,8 +100,8 @@ export const mainNav: NavItem[] = [
 export const futureModules = [
   { label: "AI Mentor", labelHi: "AI मेंटर", href: "#", comingSoon: true },
   { label: "Student Dashboard", labelHi: "छात्र पोर्टल", href: "#", comingSoon: true },
-  { label: "Research Hub", labelHi: "अनुसंधान केंद्र", href: "#", comingSoon: true },
-  { label: "Digital Library", labelHi: "डिजिटल पुस्तकालय", href: "#", comingSoon: true },
+  { label: "Scholarships", labelHi: "छात्रवृत्ति", href: "/scholarships", comingSoon: false },
+  { label: "Rankings", labelHi: "रैंकिंग", href: "/rankings", comingSoon: false },
   { label: "National Talent Index", labelHi: "राष्ट्रीय प्रतिभा सूचकांक", href: "#", comingSoon: true },
   { label: "Mobile App", labelHi: "मोबाइल ऐप", href: "#", comingSoon: true },
 ] as const;
@@ -110,15 +109,22 @@ export const futureModules = [
 export const footerNav = {
   platform: [
     { label: "About TEJAS", href: "/about" },
-    { label: "Current Editions", href: "/editions" },
-    { label: "Previous Editions", href: "/editions/previous" },
-    { label: "Mock Tests", href: "/prepare/mock-tests" },
+    { label: "Editions", href: "/editions" },
+    { label: "Roadmap", href: "/about#roadmap" },
+    { label: "Research", href: "/research" },
+    { label: "Innovation", href: "/innovation" },
   ],
   olympiads: [
-    { label: "English (Active)", href: "/olympiads/english" },
-    { label: "Mathematics (Active)", href: "/olympiads/mathematics" },
-    { label: "Technology (Active)", href: "/olympiads/technology" },
+    { label: "English", href: "/olympiads/english" },
+    { label: "Mathematics", href: "/olympiads/mathematics" },
+    { label: "Technology", href: "/olympiads/technology" },
     { label: "All Olympiads", href: "/olympiads" },
+  ],
+  learning: [
+    { label: "Prepare Hub", href: "/prepare" },
+    { label: "Mock Tests", href: "/prepare/mock-tests" },
+    { label: "Resources", href: "/resources" },
+    { label: "Hall of Fame", href: "/hall-of-fame" },
   ],
   support: [
     { label: "FAQ", href: "/faq" },
@@ -127,10 +133,6 @@ export const footerNav = {
   ],
   dhe: [
     { label: "DHE Website", href: "https://www.dhe.org.in", external: true },
-    {
-      label: "DHE Olympiads Program",
-      href: "https://www.dhe.org.in/programs/dhe-olympiads",
-      external: true,
-    },
+    { label: "Shiksha Mahakumbh", href: "https://www.shikshamahakumbh.com", external: true },
   ],
 } as const;

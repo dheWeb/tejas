@@ -35,6 +35,8 @@ export const hallOfFameCategories = [
   { id: "research", label: { en: "Research Awards", hi: "अनुसंधान पुरस्कार" } },
   { id: "young-scientist", label: { en: "Young Scientist", hi: "युवा वैज्ञानिक" } },
   { id: "young-innovator", label: { en: "Young Innovator", hi: "युवा नवप्रवर्तक" } },
+  { id: "young-author", label: { en: "Young Author", hi: "युवा लेखक" } },
+  { id: "young-technologist", label: { en: "Young Technologist", hi: "युवा प्रौद्योगिकीविद" } },
   { id: "project", label: { en: "Project Showcase", hi: "परियोजना प्रदर्शनी" } },
 ] as const;
 

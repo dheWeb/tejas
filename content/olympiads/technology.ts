@@ -250,4 +250,28 @@ export const technologyOlympiad: OlympiadPortalContent = {
     },
   ],
   hallOfFameHighlights: [],
+  skillsDeveloped: [
+    { en: "Digital literacy and safe internet practices", hi: "डिजिटल साक्षरता" },
+    { en: "Computational thinking and algorithmic logic", hi: "Computational thinking" },
+    { en: "Awareness of AI, robotics, and emerging tech", hi: "AI, robotics जागरूकता" },
+  ],
+  learningOutcomes: [
+    { en: "Responsible technology use and digital citizenship", hi: "जिम्मेदार technology उपयोग" },
+    { en: "Foundation for coding, innovation, and STEM careers", hi: "coding और STEM careers की नींव" },
+  ],
+  careerPathways: [
+    { en: "Software engineering and AI/ML", hi: "Software engineering और AI/ML" },
+    { en: "Cybersecurity and network administration", hi: "Cybersecurity" },
+    { en: "Product design, EdTech, and startups", hi: "Product design, EdTech और startups" },
+  ],
+  sampleQuestions: [
+    {
+      question: { en: "Which device stores permanent data in a computer? (a) RAM (b) ROM (c) CPU (d) Monitor", hi: "स्थायी डेटा कौन सा उपकरण संग्रहीत करता है?" },
+      hint: { en: "Level C — Digital basics", hi: "स्तर C" },
+    },
+    {
+      question: { en: "What is the next step after 'Start' in a flowchart that checks if a number is even?", hi: "Flowchart में even check के बाद अगला कदम?" },
+      hint: { en: "Level D — Logic", hi: "स्तर D — Logic" },
+    },
+  ],
 };

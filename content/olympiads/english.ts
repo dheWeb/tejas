@@ -379,4 +379,36 @@ export const englishOlympiad: OlympiadPortalContent = {
     { name: "Kasak Thakur", school: "Kundan International School, Chandigarh", level: { en: "Level B — 1st", hi: "स्तर B — प्रथम" }, year: 2025 },
     { name: "Nashra", school: "St. Vivekanand Millennium School, Pinjore", level: { en: "Level A — 1st", hi: "स्तर A — प्रथम" }, year: 2025 },
   ],
+  skillsDeveloped: [
+    { en: "Vocabulary building and contextual usage", hi: "शब्दावली निर्माण" },
+    { en: "Reading comprehension and inference", hi: "पठन बोध और निष्कर्ष" },
+    { en: "Grammar accuracy and sentence structure", hi: "व्याकरण शुद्धता" },
+    { en: "Creative and analytical writing", hi: "रचनात्मक और विश्लेषणात्मक लेखन" },
+    { en: "OMR-based exam discipline and time management", hi: "OMR अनुशासन और समय प्रबंधन" },
+  ],
+  learningOutcomes: [
+    { en: "Strengthen linguistic fundamentals from an early age", hi: "प्रारंभिक आयु से भाषा की मजबूत नींव" },
+    { en: "Build confidence for global communication while rooted in Bharatiya values", hi: "भारतीय मूल्यों में निहित वैश्विक संचार आत्मविश्वास" },
+    { en: "Develop competitive spirit and exam readiness", hi: "प्रतियोगी भावना और परीक्षा तैयारी" },
+  ],
+  careerPathways: [
+    { en: "Journalism, media, and content creation", hi: "पत्रकारिता, मीडिया और content creation" },
+    { en: "Law, civil services, and public policy", hi: "विधि, civil services और public policy" },
+    { en: "Teaching, translation, and language research", hi: "शिक्षण, अनुवाद और भाषा अनुसंधान" },
+    { en: "International relations and diplomacy", hi: "अंतर्राष्ट्रीय संबंध और diplomacy" },
+  ],
+  sampleQuestions: [
+    {
+      question: { en: "Choose the synonym of 'Benevolent': (a) Kind (b) Cruel (c) Silent (d) Swift", hi: "Benevolent का पर्यायवाची चुनें" },
+      hint: { en: "Level D — Vocabulary", hi: "स्तर D — शब्दावली" },
+    },
+    {
+      question: { en: "Read: 'The early bird catches the worm.' What does this proverb mean?", hi: "यह कहावत क्या अर्थ देती है?" },
+      hint: { en: "Level C — Comprehension", hi: "स्तर C — बोध" },
+    },
+    {
+      question: { en: "Identify the error: 'She don't like apples.'", hi: "त्रुटि पहचानें" },
+      hint: { en: "Level E — Grammar", hi: "स्तर E — व्याकरण" },
+    },
+  ],
 };

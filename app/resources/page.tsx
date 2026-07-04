@@ -17,7 +17,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title="Learning Resources Hub"
-        subtitle="Complete learning ecosystem — books, practice, videos, guides, downloads, and research."
+        subtitle="Books, question banks, mock tests, videos, teacher toolkit, parent guide, school resources, research, and Bal Shodh Patrika."
         primaryCta={{ label: "Prepare Hub", href: "/prepare" }}
         secondaryCta={{ label: "Olympiads", href: "/olympiads" }}
       />

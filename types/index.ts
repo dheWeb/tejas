@@ -41,7 +41,7 @@ export interface HallOfFameEntry {
   id: string;
   name: string;
   rank: number;
-  category: "national" | "state" | "school" | "teacher" | "innovation" | "research" | "young-scientist" | "young-innovator" | "project";
+  category: "national" | "state" | "school" | "teacher" | "innovation" | "research" | "young-scientist" | "young-innovator" | "young-author" | "young-technologist" | "project";
   olympiad: string;
   state?: string;
   school?: string;

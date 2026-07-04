@@ -33,30 +33,27 @@ export function HomeHero() {
           </p>
 
           <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-tejas-blue md:text-6xl lg:text-7xl">
-            {brand.tagline.split(". ").map((word, i) => (
-              <span key={word} className={i === 1 ? "text-tejas-saffron" : ""}>
-                {word}{i < 2 ? ". " : ""}
-              </span>
-            ))}
+            {brand.name}
           </h1>
 
-          <p className="mt-4 text-2xl font-bold text-tejas-ink md:text-3xl">{brand.name}</p>
+          <p className="mt-3 text-xl font-semibold text-tejas-ink md:text-2xl">{brand.fullName}</p>
           <p className="mt-1 font-hindi text-lg text-tejas-muted">{brand.fullNameHi}</p>
+          <p className="mt-2 text-sm font-medium text-tejas-saffron">{t(brandContent.ecosystem)}</p>
 
           <p className="mt-6 max-w-xl text-lg text-tejas-muted leading-relaxed">
             {t(brandContent.taglineLong)}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/olympiads">
+            <Link href="/about">
               <Button size="lg" className="group shadow-tejas-lg">
-                Explore Olympiads
+                Explore TEJAS
                 <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" aria-hidden />
               </Button>
             </Link>
-            <Link href="/prepare/mock-tests">
+            <Link href="/olympiads">
               <Button variant="outline" size="lg">
-                Free Mock Test
+                Olympiads
               </Button>
             </Link>
           </div>

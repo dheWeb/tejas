@@ -21,16 +21,17 @@ interface Props {
 const portalNav = [
   { id: "overview", label: "Overview" },
   { id: "why", label: "Why" },
+  { id: "skills", label: "Skills" },
+  { id: "outcomes", label: "Outcomes" },
+  { id: "careers", label: "Careers" },
   { id: "eligibility", label: "Eligibility" },
   { id: "pattern", label: "Exam Pattern" },
   { id: "syllabus", label: "Syllabus" },
+  { id: "samples", label: "Samples" },
   { id: "roadmap", label: "Roadmap" },
   { id: "books", label: "Books" },
   { id: "mock-tests", label: "Mock Tests" },
-  { id: "papers", label: "Papers" },
-  { id: "videos", label: "Videos" },
   { id: "awards", label: "Awards" },
-  { id: "calendar", label: "Calendar" },
   { id: "guides", label: "Guides" },
   { id: "faq", label: "FAQ" },
 ];
@@ -116,6 +117,37 @@ export function OlympiadPortal({ olympiad }: Props) {
           <p className="mt-4 max-w-3xl text-tejas-muted leading-relaxed">{t(olympiad.whySubject)}</p>
         </section>
 
+        <section id="skills" className="scroll-mt-32 border-t border-stone-200 py-16">
+          <h2 className="text-2xl font-bold text-tejas-ink">Skills Developed</h2>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            {olympiad.skillsDeveloped.map((s) => (
+              <li key={s.en} className="rounded-xl border border-stone-200 p-4 text-sm text-tejas-muted">{t(s)}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section id="outcomes" className="scroll-mt-32 border-t border-stone-200 py-16">
+          <h2 className="text-2xl font-bold text-tejas-ink">Learning Outcomes</h2>
+          <ul className="mt-6 space-y-3">
+            {olympiad.learningOutcomes.map((o) => (
+              <li key={o.en} className="flex items-start gap-3 text-tejas-muted">
+                <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-tejas-emerald" aria-hidden />
+                {t(o)}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section id="careers" className="scroll-mt-32 border-t border-stone-200 py-16">
+          <h2 className="text-2xl font-bold text-tejas-ink">Career Pathways</h2>
+          <p className="mt-2 text-sm text-tejas-muted">Subject excellence opens doors across disciplines:</p>
+          <ul className="mt-6 flex flex-wrap gap-3">
+            {olympiad.careerPathways.map((c) => (
+              <li key={c.en} className="rounded-full border border-tejas-blue/20 bg-tejas-blue/5 px-4 py-2 text-sm text-tejas-blue">{t(c)}</li>
+            ))}
+          </ul>
+        </section>
+
         <section id="eligibility" className="scroll-mt-32 border-t border-stone-200 py-16">
           <h2 className="text-2xl font-bold text-tejas-ink">Eligibility</h2>
           <ul className="mt-6 space-y-3">
@@ -170,6 +202,20 @@ export function OlympiadPortal({ olympiad }: Props) {
             ))}
           </div>
         </section>
+
+        {olympiad.sampleQuestions.length > 0 && (
+          <section id="samples" className="scroll-mt-32 border-t border-stone-200 py-16">
+            <h2 className="text-2xl font-bold text-tejas-ink">Sample Questions</h2>
+            <div className="mt-6 space-y-4">
+              {olympiad.sampleQuestions.map((sq, i) => (
+                <div key={sq.question.en} className="rounded-xl border border-stone-200 bg-tejas-ivory/50 p-5">
+                  <p className="font-medium text-tejas-ink"><span className="text-tejas-saffron">Q{i + 1}.</span> {t(sq.question)}</p>
+                  {sq.hint && <p className="mt-2 text-xs text-tejas-muted">{t(sq.hint)}</p>}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {olympiad.preparationRoadmap.length > 0 && (
           <section id="roadmap" className="scroll-mt-32 border-t border-stone-200 py-16">

@@ -73,6 +73,17 @@ export function createComingSoonOlympiad(config: ComingSoonConfig): OlympiadPort
     schoolGuide: [],
     calendar: [],
     hallOfFameHighlights: [],
+    skillsDeveloped: [
+      ls("Analytical thinking", "विश्लेषणात्मक सोच"),
+      ls("Problem-solving", "समस्या समाधान"),
+    ],
+    learningOutcomes: [
+      ls("Grade-appropriate competency mastery", "कक्षा-अनुकूल दक्षता"),
+    ],
+    careerPathways: [
+      ls("Details published before launch", "लॉन्च से पहले विवरण"),
+    ],
+    sampleQuestions: [],
   };
 }
 

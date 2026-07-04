@@ -268,4 +268,28 @@ export const mathematicsOlympiad: OlympiadPortalContent = {
     },
   ],
   hallOfFameHighlights: [],
+  skillsDeveloped: [
+    { en: "Logical reasoning and pattern recognition", hi: "तार्किक तर्क और pattern recognition" },
+    { en: "Numerical aptitude and mental maths", hi: "संख्यात्मक अभिरुचि" },
+    { en: "Problem decomposition and solution strategies", hi: "समस्या विघटन" },
+  ],
+  learningOutcomes: [
+    { en: "Conceptual clarity beyond rote formulas", hi: "रटант से परे अवधारणात्मक स्पष्टता" },
+    { en: "Higher-order thinking for Olympiad-level questions", hi: "Olympiad-स्तरीय उच्च सोच" },
+  ],
+  careerPathways: [
+    { en: "Engineering, architecture, and data science", hi: "इंजीनियरिंग, architecture और data science" },
+    { en: "Actuarial science, finance, and economics", hi: "Actuarial science, finance और economics" },
+    { en: "Pure mathematics, research, and teaching", hi: "शुद्ध गणित, अनुसंधान और शिक्षण" },
+  ],
+  sampleQuestions: [
+    {
+      question: { en: "If 3x + 7 = 22, find x.", hi: "3x + 7 = 22 में x ज्ञात करें" },
+      hint: { en: "Level D — Algebra", hi: "स्तर D — बीजगणित" },
+    },
+    {
+      question: { en: "What is 25% of 480?", hi: "480 का 25% क्या है?" },
+      hint: { en: "Level C — Percentages", hi: "स्तर C — प्रतिशत" },
+    },
+  ],
 };

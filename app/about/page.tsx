@@ -4,13 +4,16 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { FeatureGrid } from "@/components/shared/FeatureGrid";
 import { QuoteCard } from "@/components/shared/QuoteCard";
+import { PhaseRoadmap } from "@/components/shared/PhaseRoadmap";
+import { TejasEmblem } from "@/components/brand/TejasEmblem";
 import { brand } from "@/design-system/tokens";
 import { brandContent } from "@/content/brand";
 import { BookOpen, Brain, Shield, Lightbulb, Users, FlaskConical } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = createMetadata({
   title: "About TEJAS",
-  description: "Learn about TEJAS — Bharat's National Talent Development Ecosystem by the Department of Holistic Education.",
+  description: "TEJAS — Talent Evaluation & Joint Assessment Series. Bharat's National Talent Development Ecosystem by Olympiad Cell, DHE.",
   path: "/about",
 });
 
@@ -28,7 +31,7 @@ const pillars = [
   {
     icon: Shield,
     title: "Secure Technology-Enabled Exams",
-    description: "Transparent, fair, and credible examinations with modern integrity safeguards.",
+    description: "OMR and digital modes with transparent, fair, and credible examination standards.",
   },
   {
     icon: Lightbulb,
@@ -43,7 +46,7 @@ const pillars = [
   {
     icon: FlaskConical,
     title: "Bal Shodh Patrika",
-    description: "Children's research journal for Classes 1–12 — nurturing curiosity and scientific inquiry.",
+    description: "Children's research journal for Classes 9–12 — nurturing curiosity and scientific inquiry.",
   },
 ];
 
@@ -52,25 +55,27 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About TEJAS"
-        title={brandContent.movement.en}
+        title={brand.name}
         subtitle={`${brand.fullName} — an independent initiative by the Olympiad Cell, ${brand.parentOrg}. Standalone. Long-term. National.`}
         primaryCta={{ label: "Explore Olympiads", href: "/olympiads" }}
-        secondaryCta={{ label: "Free Mock Test", href: "/prepare/mock-tests" }}
+        secondaryCta={{ label: "Register Interest", href: "/#register" }}
       />
 
       <section className="tejas-section">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="max-w-3xl">
-              <p className="text-lg text-tejas-muted leading-relaxed">
-                While some activities were previously organized under the Shiksha Mahakumbh Abhiyan,
-                TEJAS is a <strong className="text-tejas-ink">standalone, long-term national initiative</strong> with
-                its own identity, vision, and mission — the flagship Olympiad and talent development platform of DHE.
-              </p>
-              <p className="mt-4 text-lg text-tejas-muted leading-relaxed">
-                The vision extends far beyond examinations: to discover, nurture, and empower young minds through
-                talent, research aptitude, innovation, leadership, entrepreneurship, and nation building.
-              </p>
+            <div className="flex items-start gap-6">
+              <TejasEmblem size="lg" />
+              <div className="max-w-3xl">
+                <h2 className="text-2xl font-bold text-tejas-ink">The Movement</h2>
+                <p className="mt-4 text-lg text-tejas-muted leading-relaxed">{brandContent.movement.en}</p>
+                <p className="mt-4 font-hindi text-tejas-muted">{brandContent.movement.hi}</p>
+                <p className="mt-6 text-lg text-tejas-muted leading-relaxed">
+                  While some activities were previously organized under the Shiksha Mahakumbh Abhiyan,
+                  TEJAS is a <strong className="text-tejas-ink">standalone, long-term national initiative</strong> with
+                  its own identity, vision, and mission — the flagship talent development platform of DHE.
+                </p>
+              </div>
             </div>
           </FadeIn>
         </div>
@@ -82,6 +87,23 @@ export default function AboutPage() {
             <SectionHeader title="What Makes TEJAS Different?" subtitle="Beyond rankings and certificates — a comprehensive ecosystem." />
           </FadeIn>
           <FeatureGrid items={pillars} columns={3} />
+        </div>
+      </section>
+
+      <section className="tejas-section">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <SectionHeader title="Product Roadmap" subtitle="Staged evolution from polished website to full national platform." />
+          </FadeIn>
+          <PhaseRoadmap />
+          <FadeIn delay={0.1}>
+            <p className="mt-6 text-sm text-tejas-muted">
+              Backend architecture planning:{" "}
+              <Link href="https://github.com/dheWeb/tejas/blob/main/docs/BACKEND_ARCHITECTURE.md" className="text-tejas-saffron hover:underline">
+                docs/BACKEND_ARCHITECTURE.md
+              </Link>
+            </p>
+          </FadeIn>
         </div>
       </section>
 

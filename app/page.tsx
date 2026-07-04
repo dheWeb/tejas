@@ -1,40 +1,36 @@
 import { HomeHero } from "@/features/home/HomeHero";
-import { TrustBanner } from "@/components/shared/TrustBanner";
-import { ImpactMetricsSection } from "@/features/home/ImpactMetricsSection";
-import { CurrentOlympiadsSection } from "@/features/home/CurrentOlympiadsSection";
+import { WhatIsTejasSection } from "@/features/home/WhatIsTejasSection";
 import { WhyTejasSection } from "@/features/home/WhyTejasSection";
+import { CurrentOlympiadsSection } from "@/features/home/CurrentOlympiadsSection";
 import { HowTejasWorksSection } from "@/features/home/HowTejasWorksSection";
 import { PrepareZoneSection } from "@/features/home/PrepareZoneSection";
-import { EditionStorySection } from "@/features/home/EditionStorySection";
-import { SuccessStoriesSection } from "@/features/home/SuccessStoriesSection";
+import { ResearchInnovationSection } from "@/features/home/ResearchInnovationSection";
 import { HallOfFamePreviewSection } from "@/features/home/HallOfFamePreviewSection";
 import { ForSchoolsSection } from "@/features/home/ForSchoolsSection";
 import { FutureVisionSection } from "@/features/home/FutureVisionSection";
-import { FutureModulesSection } from "@/features/home/FutureModulesSection";
-import { NewsSection } from "@/features/home/NewsSection";
+import { RegisterCTASection } from "@/features/home/RegisterCTASection";
 import { FAQSection } from "@/components/shared/FAQSection";
-import { SectionDivider } from "@/components/shared/SectionDivider";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { faqItems } from "@/data/faq";
+import { organizationJsonLd, websiteJsonLd, faqJsonLd } from "@/lib/seo/json-ld";
 
+/** Homepage narrative — each section flows into the next */
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={[organizationJsonLd(), websiteJsonLd(), faqJsonLd(faqItems.slice(0, 6))]} />
       <HomeHero />
-      <TrustBanner />
-      <ImpactMetricsSection />
-      <SectionDivider variant="gradient" />
+      <WhatIsTejasSection />
       <WhyTejasSection />
-      <HowTejasWorksSection />
       <CurrentOlympiadsSection />
+      <HowTejasWorksSection />
       <PrepareZoneSection />
-      <EditionStorySection />
-      <SuccessStoriesSection />
+      <ResearchInnovationSection />
       <HallOfFamePreviewSection />
       <ForSchoolsSection />
       <FutureVisionSection />
-      <FutureModulesSection />
-      <NewsSection />
-      <FAQSection items={faqItems.slice(0, 5)} />
+      <FAQSection items={faqItems.slice(0, 6)} />
+      <RegisterCTASection />
     </>
   );
 }

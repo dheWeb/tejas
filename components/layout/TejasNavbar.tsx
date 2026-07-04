@@ -8,6 +8,7 @@ import { mainNav } from "@/config/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { brand } from "@/design-system/tokens";
+import { TejasEmblem } from "@/components/brand/TejasEmblem";
 import { MegaMenu } from "./MegaMenu";
 import { SearchBox } from "@/components/shared/SearchBox";
 import { useI18n } from "@/lib/i18n/context";
@@ -57,21 +58,19 @@ export function TejasNavbar() {
           href="/"
           className="flex shrink-0 items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tejas-saffron rounded-lg"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-tejas-saffron to-tejas-saffron-dark text-sm font-black text-white shadow-md">
-            T
-          </div>
+          <TejasEmblem size="md" />
           <div className="leading-tight">
             <span className="block text-lg font-bold text-tejas-blue">{brand.name}</span>
-            <span className="hidden font-hindi text-[10px] text-tejas-muted sm:block">{brand.nameHi}</span>
+            <span className="hidden max-w-[11rem] truncate text-[10px] text-tejas-muted sm:block">{brand.fullName}</span>
           </div>
         </Link>
 
-        <div className="hidden flex-1 justify-center lg:flex max-w-md">
-          <SearchBox className="w-full max-w-sm" />
+        <div className="hidden flex-1 justify-center xl:flex max-w-sm">
+          <SearchBox className="w-full max-w-xs" />
         </div>
 
         <div className="hidden items-center gap-0.5 lg:flex">
-          {mainNav.slice(0, 6).map((item) =>
+          {mainNav.map((item) =>
             item.megaMenu ? (
               <MegaMenu
                 key={item.href}
@@ -85,7 +84,7 @@ export function TejasNavbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                  "rounded-lg px-2.5 py-2 text-xs font-medium transition-colors xl:px-3 xl:text-sm",
                   pathname === item.href || pathname.startsWith(item.href + "/")
                     ? "text-tejas-saffron bg-tejas-saffron-soft/50"
                     : "text-tejas-ink hover:text-tejas-saffron"
@@ -115,9 +114,11 @@ export function TejasNavbar() {
               Mock Test
             </Button>
           </Link>
-          <Button size="sm" disabled title="Registration opens soon">
-            Register
-          </Button>
+          <Link href="/#register">
+            <Button size="sm" title="Registration portal opening in Phase 4">
+              Register
+            </Button>
+          </Link>
         </div>
 
         <button

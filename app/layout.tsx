@@ -47,7 +47,7 @@ export default function RootLayout({
             {children}
           </main>
           <TejasFooter />
-          <FloatingCTA />
+          <FloatingCTA label="Register for TEJAS" href="/#register" />
         </I18nProvider>
       </body>
     </html>
