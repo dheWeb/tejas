@@ -2,69 +2,125 @@ import { createMetadata } from "@/config/seo";
 import { PageHero } from "@/components/shared/PageHero";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { FadeIn } from "@/components/shared/FadeIn";
-import { Testimonial } from "@/components/shared/Testimonial";
+import { FeatureGrid } from "@/components/shared/FeatureGrid";
+import { QuoteCard } from "@/components/shared/QuoteCard";
 import { brand } from "@/design-system/tokens";
+import { brandContent } from "@/content/brand";
+import { BookOpen, Brain, Shield, Lightbulb, Users, FlaskConical } from "lucide-react";
 
 export const metadata = createMetadata({
   title: "About TEJAS",
-  description: "Learn about TEJAS — India's National Talent Development Ecosystem by the Department of Holistic Education.",
+  description: "Learn about TEJAS — Bharat's National Talent Development Ecosystem by the Department of Holistic Education.",
   path: "/about",
 });
+
+const pillars = [
+  {
+    icon: BookOpen,
+    title: "Bharatiya Knowledge + Modern Education",
+    description: "Integrating contemporary education with rich knowledge traditions, ethical values, and life skills.",
+  },
+  {
+    icon: Brain,
+    title: "Concept-Based Assessment",
+    description: "Logical reasoning, analytical thinking, creativity, and real-world application — not rote memorization.",
+  },
+  {
+    icon: Shield,
+    title: "Secure Technology-Enabled Exams",
+    description: "Transparent, fair, and credible examinations with modern integrity safeguards.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Innovation & Entrepreneurship",
+    description: "Inspiring job creators — nurturing future innovators and entrepreneurs.",
+  },
+  {
+    icon: Users,
+    title: "Opportunities for Schools",
+    description: "National platforms for innovation, mentorship, and collaboration with premier institutions.",
+  },
+  {
+    icon: FlaskConical,
+    title: "Bal Shodh Patrika",
+    description: "Children's research journal for Classes 1–12 — nurturing curiosity and scientific inquiry.",
+  },
+];
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About"
-        title="India's National Talent Development Ecosystem"
-        subtitle={`${brand.fullName} (${brand.name}) is engineered as an independent platform — proudly powered by the ${brand.parentOrg}.`}
+        eyebrow="About TEJAS"
+        title={brandContent.movement.en}
+        subtitle={`${brand.fullName} — an independent initiative by the Olympiad Cell, ${brand.parentOrg}. Standalone. Long-term. National.`}
+        primaryCta={{ label: "Explore Olympiads", href: "/olympiads" }}
+        secondaryCta={{ label: "Free Mock Test", href: "/prepare/mock-tests" }}
       />
-      <section className="py-16 md:py-24">
+
+      <section className="tejas-section">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-16 lg:grid-cols-2">
-            <FadeIn>
-              <SectionHeader
-                title="Our Mission"
-                subtitle="To discover, nurture, assess, and celebrate talent from every corner of India — ensuring no gifted student is left behind."
-                align="left"
-                className="mb-0"
-              />
-              <div className="mt-8 space-y-4 text-tejas-muted leading-relaxed">
-                <p>
-                  TEJAS is not just an olympiad platform. It is the foundation of a complete
-                  educational ecosystem that will eventually include student, parent, teacher,
-                  and school portals, live examinations, AI mentorship, scholarships, and the
-                  National Talent Index.
-                </p>
-                <p>
-                  Like Google Classroom belongs to Google but operates as its own product,
-                  TEJAS belongs to DHE but is engineered as a standalone application at{" "}
-                  <strong className="text-tejas-ink">{brand.domain}</strong>.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <Testimonial
-                quote="TEJAS represents the future of talent assessment in India — rigorous, inclusive, and aspirational."
-                author="DHE Academic Council"
-                role="Department of Holistic Education"
-              />
-            </FadeIn>
-          </div>
-          <FadeIn delay={0.2}>
-            <div className="mt-20 grid gap-8 md:grid-cols-3">
-              {[
-                { title: "Vision", text: "Every Indian student discovered and supported to reach their highest potential." },
-                { title: "Values", text: "Excellence, equity, integrity, and innovation in everything we build." },
-                { title: "Approach", text: "Modular, scalable architecture ready for a decade of growth." },
-              ].map((item) => (
-                <div key={item.title} className="rounded-2xl border border-stone-200 bg-white p-8 shadow-tejas">
-                  <h3 className="text-xl font-bold text-tejas-saffron">{item.title}</h3>
-                  <p className="mt-3 text-tejas-muted">{item.text}</p>
-                </div>
-              ))}
+          <FadeIn>
+            <div className="max-w-3xl">
+              <p className="text-lg text-tejas-muted leading-relaxed">
+                While some activities were previously organized under the Shiksha Mahakumbh Abhiyan,
+                TEJAS is a <strong className="text-tejas-ink">standalone, long-term national initiative</strong> with
+                its own identity, vision, and mission — the flagship Olympiad and talent development platform of DHE.
+              </p>
+              <p className="mt-4 text-lg text-tejas-muted leading-relaxed">
+                The vision extends far beyond examinations: to discover, nurture, and empower young minds through
+                talent, research aptitude, innovation, leadership, entrepreneurship, and nation building.
+              </p>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      <section className="tejas-section bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <SectionHeader title="What Makes TEJAS Different?" subtitle="Beyond rankings and certificates — a comprehensive ecosystem." />
+          </FadeIn>
+          <FeatureGrid items={pillars} columns={3} />
+        </div>
+      </section>
+
+      <section className="tejas-section bg-tejas-blue text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <QuoteCard
+              quote={brandContent.vision.en}
+              quoteHi={brandContent.vision.hi}
+              author="Our Vision"
+              role={`${brand.parentOrg} · Olympiad Cell`}
+              className="max-w-4xl mx-auto border-white/10 bg-white/5 [&_p]:text-white/90"
+            />
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="tejas-section">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 md:grid-cols-2">
+            <FadeIn>
+              <h2 className="text-2xl font-bold text-tejas-ink">For Outstanding Students</h2>
+              <ul className="mt-4 space-y-3 text-tejas-muted">
+                <li>National & international recognition through prestigious platforms</li>
+                <li>Talent conclaves with scientists, innovators, and policymakers</li>
+                <li>Entrepreneurship and innovation orientation pathways</li>
+                <li>Scholarships and advanced learning opportunities</li>
+              </ul>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <h2 className="text-2xl font-bold text-tejas-ink">For Schools</h2>
+              <ul className="mt-4 space-y-3 text-tejas-muted">
+                <li>National platform for school innovation and excellence</li>
+                <li>Project showcase and exhibition opportunities</li>
+                <li>Collaboration with IITs, NITs, and research institutions</li>
+                <li>Expert mentorship for educators and students</li>
+              </ul>
+            </FadeIn>
+          </div>
         </div>
       </section>
     </>

@@ -1,38 +1,57 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { EditionCard } from "@/components/shared/EditionCard";
+import { HeroIllustration } from "@/components/shared/HeroIllustration";
+import { BackgroundPattern } from "@/components/shared/BackgroundPattern";
+import { MetricCard } from "@/components/shared/MetricCard";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { getCurrentEdition } from "@/data/editions";
+import { impactMetrics } from "@/data/metrics";
 import { brand } from "@/design-system/tokens";
+import { brandContent } from "@/content/brand";
+import { useI18n } from "@/lib/i18n/context";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 export function HomeHero() {
   const edition = getCurrentEdition();
+  const { t } = useI18n();
+  const reduced = usePrefersReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-mandala-accent py-16 md:py-24 lg:py-28">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+    <section className="relative min-h-[90vh] overflow-hidden flex items-center">
+      <BackgroundPattern variant="copper" />
+      <BackgroundPattern variant="mandala" className="opacity-40" />
+
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-28">
         <FadeIn>
-          <p className="text-sm font-semibold uppercase tracking-widest text-tejas-saffron">
-            {brand.tagline}
+          <p className="inline-flex items-center gap-2 rounded-full border border-tejas-saffron/20 bg-tejas-saffron-soft/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-tejas-saffron">
+            {t(brandContent.ecosystem)}
           </p>
-          <h1 className="mt-4 text-5xl font-bold tracking-tight text-tejas-blue md:text-6xl lg:text-7xl">
-            {brand.name}
+
+          <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-tejas-blue md:text-6xl lg:text-7xl">
+            {brand.tagline.split(". ").map((word, i) => (
+              <span key={word} className={i === 1 ? "text-tejas-saffron" : ""}>
+                {word}{i < 2 ? ". " : ""}
+              </span>
+            ))}
           </h1>
-          <p className="mt-2 text-lg font-medium text-tejas-muted md:text-xl">
-            {brand.fullName}
+
+          <p className="mt-4 text-2xl font-bold text-tejas-ink md:text-3xl">{brand.name}</p>
+          <p className="mt-1 font-hindi text-lg text-tejas-muted">{brand.fullNameHi}</p>
+
+          <p className="mt-6 max-w-xl text-lg text-tejas-muted leading-relaxed">
+            {t(brandContent.taglineLong)}
           </p>
-          <p className="mt-6 max-w-lg text-tejas-muted leading-relaxed">
-            India&apos;s National Talent Development Ecosystem — discover your potential,
-            prepare with world-class resources, and shine on the national stage.
-          </p>
+
           <div className="mt-8 flex flex-wrap gap-4">
             <Link href="/olympiads">
-              <Button size="lg">
+              <Button size="lg" className="group shadow-tejas-lg">
                 Explore Olympiads
-                <ArrowRight className="h-4 w-4" aria-hidden />
+                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" aria-hidden />
               </Button>
             </Link>
             <Link href="/prepare/mock-tests">
@@ -41,22 +60,48 @@ export function HomeHero() {
               </Button>
             </Link>
           </div>
-          <p className="mt-6 font-hindi text-sm text-tejas-muted">
-            खोजें · तैयारी करें · चमकें
-          </p>
+
+          <p className="mt-6 font-hindi text-sm text-tejas-muted">{brand.taglineHi}</p>
         </FadeIn>
-        <FadeIn delay={0.15}>
-          <EditionCard
-            year={edition.year}
-            name={edition.name}
-            subtitle={edition.subtitle}
-            theme={edition.theme}
-            status={edition.status}
-            featured
-            href="/editions"
-          />
+
+        <FadeIn delay={0.15} className="relative">
+          <HeroIllustration />
+          <div className="absolute -bottom-4 left-0 right-0 lg:-bottom-8">
+            <EditionCard
+              year={edition.year}
+              name={edition.name}
+              subtitle={edition.subtitle}
+              theme={edition.theme}
+              status={edition.status}
+              featured
+              href="/editions"
+              className="mx-auto max-w-sm shadow-tejas-lg"
+            />
+          </div>
         </FadeIn>
       </div>
+
+      {/* Floating stats strip */}
+      <div className="relative border-t border-stone-200/60 bg-white/60 backdrop-blur-sm">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-8 sm:grid-cols-3 lg:grid-cols-5 lg:px-8">
+          {impactMetrics.slice(0, 5).map((m, i) => (
+            <FadeIn key={m.label} delay={i * 0.05}>
+              <MetricCard {...m} className="border-0 shadow-none bg-transparent py-2" />
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+
+      {!reduced && (
+        <motion.div
+          className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-1 text-tejas-muted"
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <span className="text-xs uppercase tracking-widest">Scroll</span>
+          <ChevronDown className="h-4 w-4" aria-hidden />
+        </motion.div>
+      )}
     </section>
   );
 }

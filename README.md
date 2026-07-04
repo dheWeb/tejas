@@ -2,7 +2,7 @@
 
 **Talent Evaluation & Joint Assessment Series**
 
-Independent frontend for [tejas.dhe.org.in](https://tejas.dhe.org.in) — India's National Talent Development Ecosystem by the Department of Holistic Education (DHE).
+Independent frontend for [tejas.dhe.org.in](https://tejas.dhe.org.in) — Bharat's National Talent Development Ecosystem by the Department of Holistic Education (DHE).
 
 ## Architecture
 
@@ -90,4 +90,4 @@ npx vercel deploy --prod --yes
 
 ## License
 
-© Department of Holistic Education, India
+© Department of Holistic Education, Bharat

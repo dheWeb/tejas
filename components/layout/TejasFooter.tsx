@@ -16,7 +16,7 @@ export function TejasFooter() {
               <span className="text-xl font-bold">{brand.name}</span>
             </div>
             <p className="mt-4 max-w-sm text-sm text-white/70 leading-relaxed">
-              {brand.fullName} — India&apos;s National Talent Development Ecosystem by the{" "}
+              {brand.fullName} — Bharat&apos;s National Talent Development Ecosystem by the{" "}
               {brand.parentOrg}.
             </p>
             <p className="mt-2 font-hindi text-sm text-white/60">

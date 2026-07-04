@@ -8,7 +8,7 @@ import { hallOfFameEntries } from "@/data/hall-of-fame";
 
 export const metadata = createMetadata({
   title: "Hall of Fame",
-  description: "Celebrating India's brightest young minds — national toppers, state champions, and schools of excellence.",
+  description: "Celebrating Bharat's brightest young minds — national toppers, state champions, and schools of excellence.",
   path: "/hall-of-fame",
 });
 
@@ -22,7 +22,7 @@ export default function HallOfFamePage() {
       <PageHero
         eyebrow="Recognition"
         title="Hall of Fame"
-        subtitle="Prestigious recognition for India's most outstanding young talent."
+        subtitle="Prestigious recognition for Bharat's most outstanding young talent."
       />
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -16,7 +16,7 @@ export default function OlympiadsPage() {
       <PageHero
         eyebrow="Olympiads"
         title="National Olympiad Series"
-        subtitle="Ten subjects designed to discover and celebrate India's brightest young minds."
+        subtitle="Ten subjects designed to discover and celebrate Bharat's brightest young minds."
         primaryCta={{ label: "Free Mock Test", href: "/prepare/mock-tests" }}
         secondaryCta={{ label: "Prepare Hub", href: "/prepare" }}
       />

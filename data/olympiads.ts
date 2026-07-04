@@ -70,7 +70,7 @@ export const olympiads: Olympiad[] = [
     slug: "sanskrit",
     name: "Sanskrit",
     nameHi: "संस्कृत",
-    description: "Classical language, grammar, and Indian knowledge traditions.",
+    description: "Classical language, grammar, and Bharatiya knowledge traditions.",
     icon: "scroll",
     color: "#D4A017",
     grades: "Classes 5–12",

@@ -8,7 +8,7 @@ const baseDetail = (slug: string): OlympiadDetail | null => {
   return {
     ...olympiad,
     eligibility: [
-      "Students enrolled in recognised schools across India",
+      "Students enrolled in recognised schools across Bharat",
       `Grade range: ${olympiad.grades}`,
       "Valid school registration or individual enrollment",
       "One attempt per edition per subject",

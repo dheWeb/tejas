@@ -26,7 +26,7 @@ export const scholarships: Scholarship[] = [
     eligibility: "Top performers from rural and aspirational districts",
     deadline: "May 2027",
     description:
-      "Inclusive scholarship ensuring talent from every corner of India receives recognition and support.",
+      "Inclusive scholarship ensuring talent from every corner of Bharat receives recognition and support.",
   },
   {
     id: "innovation",

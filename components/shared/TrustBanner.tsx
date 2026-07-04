@@ -1,0 +1,33 @@
+import { cn } from "@/lib/utils";
+import { Shield, Award, Lock, Eye } from "lucide-react";
+
+interface TrustBannerProps {
+  className?: string;
+}
+
+const items = [
+  { icon: Shield, label: "DHE Olympiad Cell", desc: "Official platform" },
+  { icon: Lock, label: "Secure Assessments", desc: "Technology-enabled integrity" },
+  { icon: Eye, label: "Transparent Process", desc: "Fair & credible evaluation" },
+  { icon: Award, label: "National Recognition", desc: "Verified credentials" },
+];
+
+export function TrustBanner({ className }: TrustBannerProps) {
+  return (
+    <div className={cn("border-y border-stone-200 bg-white/80 backdrop-blur-sm", className)}>
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-4 py-6 sm:px-6 lg:px-8">
+        {items.map((item) => (
+          <div key={item.label} className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-tejas-saffron-soft text-tejas-saffron">
+              <item.icon className="h-5 w-5" aria-hidden />
+            </div>
+            <div>
+              <p className="text-sm font-bold text-tejas-ink">{item.label}</p>
+              <p className="text-xs text-tejas-muted">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

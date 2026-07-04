@@ -16,7 +16,7 @@ export default function PreviousEditionsPage() {
       <PageHero
         eyebrow="Archive"
         title="Previous Editions"
-        subtitle="Honouring the journey of India's national talent assessment platform."
+        subtitle="Honouring the journey of Bharat's national talent assessment platform."
         primaryCta={{ label: "Current Editions", href: "/editions" }}
       />
       <section className="py-16 md:py-24">

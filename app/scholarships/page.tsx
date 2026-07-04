@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 export const metadata = createMetadata({
   title: "Scholarships",
-  description: "TEJAS scholarships and grants for outstanding performers across India.",
+  description: "TEJAS scholarships and grants for outstanding performers across Bharat.",
   path: "/scholarships",
 });
 
@@ -18,7 +18,7 @@ export default function ScholarshipsPage() {
       <PageHero
         eyebrow="Scholarships"
         title="Scholarships & Grants"
-        subtitle="Merit-based financial support for India's brightest young minds."
+        subtitle="Merit-based financial support for Bharat's brightest young minds."
         primaryCta={{ label: "View Rankings", href: "/rankings" }}
       />
       <section className="py-16 md:py-24">

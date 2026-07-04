@@ -18,7 +18,7 @@ export default function SchoolsPage() {
       <PageHero
         eyebrow="Schools"
         title="School Partnership Program"
-        subtitle="Join 12,000+ schools in India's most prestigious talent assessment network."
+        subtitle="Join 12,000+ schools in Bharat's most prestigious talent assessment network."
         primaryCta={{ label: "Contact Us", href: "/contact" }}
       />
       <section className="py-16 md:py-24">

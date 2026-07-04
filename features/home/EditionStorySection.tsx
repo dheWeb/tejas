@@ -18,7 +18,7 @@ export function EditionStorySection() {
           <SectionHeader
             eyebrow="Editions"
             title="Featured Edition Story"
-            subtitle="Each TEJAS edition honours a luminary of Indian knowledge, science, and culture."
+            subtitle="Each TEJAS edition honours a luminary of Bharatiya knowledge, science, and culture."
           />
         </FadeIn>
         <Timeline items={timelineItems} />

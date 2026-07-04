@@ -10,7 +10,7 @@ export function ImpactMetricsSection() {
         <FadeIn>
           <SectionHeader
             eyebrow="Impact"
-            title="Building India's Talent Future"
+            title="Building Bharat's Talent Future"
             subtitle="Trusted by millions of students, thousands of schools, and educators across every state and union territory."
           />
         </FadeIn>

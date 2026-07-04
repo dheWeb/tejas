@@ -9,6 +9,7 @@
     --tejas-ivory: #FAF9F6;
     --tejas-emerald: #059669;
     --tejas-gold: #D4A017;
+    --tejas-copper: #B87333;
     --tejas-ink: #1C1917;
   }
 
@@ -19,6 +20,13 @@
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
   }
 
@@ -34,5 +42,37 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .tejas-pattern {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(232, 93, 4, 0.05) 0%, transparent 45%),
+      radial-gradient(circle at 80% 80%, rgba(30, 58, 95, 0.06) 0%, transparent 45%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(184, 115, 51, 0.03) 40px,
+        rgba(184, 115, 51, 0.03) 41px
+      );
+  }
+
+  .tejas-mandala {
+    background-image:
+      radial-gradient(circle at center, transparent 0%, transparent 30%, rgba(30, 58, 95, 0.04) 31%, transparent 32%),
+      radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(232, 93, 4, 0.03) 51%, transparent 52%);
+    background-size: 120px 120px;
+  }
+
+  .tejas-copper-gradient {
+    background: linear-gradient(135deg, rgba(184, 115, 51, 0.12) 0%, rgba(232, 93, 4, 0.08) 50%, rgba(30, 58, 95, 0.06) 100%);
+  }
+
+  .tejas-glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/60 shadow-tejas;
+  }
+
+  .tejas-section {
+    @apply py-20 md:py-28 lg:py-32;
   }
 }

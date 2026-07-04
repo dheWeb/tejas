@@ -1,54 +1,72 @@
-import { Compass, Sprout, ClipboardCheck, PartyPopper } from "lucide-react";
+import { Brain, Lightbulb, Shield, BookOpen, Cpu, Users, Sparkles, Target } from "lucide-react";
+import { FeatureGrid } from "@/components/shared/FeatureGrid";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { FadeIn } from "@/components/shared/FadeIn";
 
-const pillars = [
+const differentiators = [
   {
-    icon: Compass,
-    title: "Discover",
-    description: "Identify hidden talent across every district, school, and community in India.",
+    icon: BookOpen,
+    title: "Bharatiya Knowledge + Modern Education",
+    titleHi: "भारतीय ज्ञान + आधुनिक शिक्षा",
+    description: "Contemporary excellence rooted in ethical values, culture, character, and life skills.",
   },
   {
-    icon: Sprout,
-    title: "Nurture",
-    description: "Provide preparation resources, mentorship pathways, and learning support.",
+    icon: Brain,
+    title: "Concept-Based Assessment",
+    titleHi: "अवधारणा-आधारित मूल्यांकन",
+    description: "Logical reasoning, creativity, problem-solving — not rote memorization.",
   },
   {
-    icon: ClipboardCheck,
-    title: "Assess",
-    description: "Fair, rigorous, and grade-appropriate evaluations designed by experts.",
+    icon: Shield,
+    title: "Secure Online Examinations",
+    titleHi: "सुरक्षित ऑनलाइन परीक्षा",
+    description: "Technology-enabled integrity with transparent, fair evaluation processes.",
   },
   {
-    icon: PartyPopper,
-    title: "Celebrate",
-    description: "Recognise achievement through certificates, scholarships, and the Hall of Fame.",
+    icon: Target,
+    title: "Comprehensive Preparation",
+    titleHi: "समग्र तैयारी",
+    description: "Mock tests, sample papers, concept videos, and performance materials.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Innovation & Entrepreneurship",
+    titleHi: "नवाचार और उद्यमिता",
+    description: "Inspiring job creators — not merely job seekers.",
+  },
+  {
+    icon: Users,
+    title: "National Movement",
+    titleHi: "राष्ट्रीय आंदोलन",
+    description: "Beyond examinations — talent, research, innovation, and nation building.",
+  },
+  {
+    icon: Cpu,
+    title: "Future-Ready Ecosystem",
+    titleHi: "भविष्य-तैयार पारिस्थितिकी तंत्र",
+    description: "AI learning, digital credentials, and research pathways — coming soon.",
+  },
+  {
+    icon: Sparkles,
+    title: "Bal Shodh Patrika",
+    titleHi: "बाल शोध पत्रिका",
+    description: "Children's research journal nurturing curiosity from Classes 1–12.",
   },
 ];
 
 export function WhyTejasSection() {
   return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="tejas-section relative overflow-hidden">
+      <div className="absolute inset-0 tejas-pattern opacity-50 pointer-events-none" aria-hidden />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <SectionHeader
             eyebrow="Why TEJAS"
-            title="Gurukul Clarity × Nalanda Wisdom × Modern Technology"
-            subtitle="A premium talent ecosystem built for India's next generation of thinkers, creators, and leaders."
+            title="Not Just an Olympiad — a National Movement"
+            subtitle="Gurukul clarity × Nalanda wisdom × modern technology — for Bharat's next generation."
           />
         </FadeIn>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {pillars.map((pillar, i) => (
-            <FadeIn key={pillar.title} delay={i * 0.08}>
-              <div className="rounded-2xl border border-stone-200 bg-white p-8 shadow-tejas h-full">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-tejas-saffron-soft text-tejas-saffron">
-                  <pillar.icon className="h-6 w-6" aria-hidden />
-                </div>
-                <h3 className="mt-5 text-xl font-bold text-tejas-ink">{pillar.title}</h3>
-                <p className="mt-3 text-sm text-tejas-muted leading-relaxed">{pillar.description}</p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+        <FeatureGrid items={differentiators} columns={4} />
       </div>
     </section>
   );

@@ -20,7 +20,7 @@ export function ForSchoolsSection() {
             <SectionHeader
               eyebrow="For Schools"
               title="Partner with TEJAS"
-              subtitle="Join 12,000+ schools nationwide in India's most prestigious talent assessment network."
+              subtitle="Join 12,000+ schools nationwide in Bharat's most prestigious talent assessment network."
               align="left"
               className="mb-0"
             />

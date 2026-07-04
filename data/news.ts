@@ -5,7 +5,7 @@ export const newsItems: NewsItem[] = [
     id: "n1",
     title: "2027 Dr APJ Abdul Kalam Edition Announced",
     date: "2026-06-15",
-    excerpt: "TEJAS unveils its flagship 2027 edition honouring India's Missile Man.",
+    excerpt: "TEJAS unveils its flagship 2027 edition honouring Bharat's Missile Man.",
     category: "Editions",
   },
   {

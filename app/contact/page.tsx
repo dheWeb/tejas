@@ -6,7 +6,7 @@ import { brand } from "@/design-system/tokens";
 
 export const metadata = createMetadata({
   title: "Contact",
-  description: "Contact TEJAS — India's National Talent Development Ecosystem.",
+  description: "Contact TEJAS — Bharat's National Talent Development Ecosystem.",
   path: "/contact",
 });
 

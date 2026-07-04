@@ -5,7 +5,7 @@ export const faqItems: FAQItem[] = [
     category: "General",
     question: "What is TEJAS?",
     answer:
-      "TEJAS (Talent Evaluation & Joint Assessment Series) is India's national talent development ecosystem by the Department of Holistic Education. It offers olympiads, assessments, preparation resources, scholarships, and recognition pathways for students across India.",
+      "TEJAS (Talent Evaluation & Joint Assessment Series) is Bharat's national talent development ecosystem by the Department of Holistic Education. It offers olympiads, assessments, preparation resources, scholarships, and recognition pathways for students across Bharat.",
   },
   {
     category: "General",

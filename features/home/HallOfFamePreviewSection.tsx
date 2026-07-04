@@ -15,7 +15,7 @@ export function HallOfFamePreviewSection() {
           <SectionHeader
             eyebrow="Recognition"
             title="Hall of Fame"
-            subtitle="Celebrating India's brightest young minds and their extraordinary achievements."
+            subtitle="Celebrating Bharat's brightest young minds and their extraordinary achievements."
           />
         </FadeIn>
         <div className="grid gap-6 md:grid-cols-3">

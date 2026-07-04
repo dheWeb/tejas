@@ -23,6 +23,7 @@ const config: Config = {
           ivory: "#FAF9F6",
           emerald: "#059669",
           gold: "#D4A017",
+          copper: "#B87333",
           ink: "#1C1917",
           muted: "#57534E",
         },
