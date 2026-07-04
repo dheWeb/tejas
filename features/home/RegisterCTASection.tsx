@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BackgroundPattern } from "@/components/shared/BackgroundPattern";
 import { currentCycle } from "@/content/current-cycle";
+import { AnalyticsEvents } from "@/lib/analytics/events";
 
 export function RegisterCTASection() {
   return (
@@ -20,7 +23,7 @@ export function RegisterCTASection() {
           Technology for Classes III–X. {currentCycle.registrationStatus.en}
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button size="lg" disabled title="Registration portal opening in Phase 4">
+          <Button size="lg" disabled title="Registration portal opening in Phase 4" onClick={() => AnalyticsEvents.registerClick("homepage_cta")}>
             Register Now
           </Button>
           <Link href="/schools">

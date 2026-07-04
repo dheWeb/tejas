@@ -12,6 +12,7 @@ import { TejasEmblem } from "@/components/brand/TejasEmblem";
 import { MegaMenu } from "./MegaMenu";
 import { SearchBox } from "@/components/shared/SearchBox";
 import { useI18n } from "@/lib/i18n/context";
+import { AnalyticsEvents } from "@/lib/analytics/events";
 
 export function TejasNavbar() {
   const pathname = usePathname();
@@ -114,7 +115,7 @@ export function TejasNavbar() {
               Mock Test
             </Button>
           </Link>
-          <Link href="/#register">
+          <Link href="/#register" onClick={() => AnalyticsEvents.registerClick("navbar")}>
             <Button size="sm" title="Registration portal opening in Phase 4">
               Register
             </Button>

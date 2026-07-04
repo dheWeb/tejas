@@ -27,11 +27,13 @@ export function createMetadata({
 }): Metadata {
   const pageTitle = title ? `${title} | ${brand.name}` : `${brand.name} — ${brand.fullName}`;
   const url = `${siteConfig.url}${path}`;
+  const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 
   return {
     title: pageTitle,
     description,
     metadataBase: new URL(siteConfig.url),
+    ...(gscVerification && { verification: { google: gscVerification } }),
     alternates: {
       canonical: url,
       languages: {

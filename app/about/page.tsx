@@ -6,6 +6,9 @@ import { FeatureGrid } from "@/components/shared/FeatureGrid";
 import { QuoteCard } from "@/components/shared/QuoteCard";
 import { PhaseRoadmap } from "@/components/shared/PhaseRoadmap";
 import { TejasEmblem } from "@/components/brand/TejasEmblem";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { organizationJsonLd, breadcrumbJsonLd } from "@/lib/seo/json-ld";
+import { siteConfig } from "@/config/seo";
 import { brand } from "@/design-system/tokens";
 import { brandContent } from "@/content/brand";
 import { BookOpen, Brain, Shield, Lightbulb, Users, FlaskConical } from "lucide-react";
@@ -53,6 +56,15 @@ const pillars = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          organizationJsonLd(),
+          breadcrumbJsonLd([
+            { name: "Home", url: siteConfig.url },
+            { name: "About TEJAS", url: `${siteConfig.url}/about` },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="About TEJAS"
         title={brand.name}

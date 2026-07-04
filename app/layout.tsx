@@ -4,6 +4,7 @@ import { TejasNavbar } from "@/components/layout/TejasNavbar";
 import { TejasFooter } from "@/components/layout/TejasFooter";
 import { FloatingCTA } from "@/components/shared/FloatingCTA";
 import { I18nProvider } from "@/lib/i18n/context";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { createMetadata } from "@/config/seo";
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} ${notoDevanagari.variable}`}>
       <body className="min-h-screen flex flex-col font-sans">
+        <GoogleAnalytics />
         <I18nProvider>
           <a
             href="#main-content"

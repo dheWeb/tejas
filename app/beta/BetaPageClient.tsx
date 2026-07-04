@@ -6,6 +6,7 @@ import { PageHero } from "@/components/shared/PageHero";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { Button } from "@/components/ui/button";
 import { currentCycle } from "@/content/current-cycle";
+import { AnalyticsEvents } from "@/lib/analytics/events";
 import { CheckCircle2, Loader2 } from "lucide-react";
 
 const FEEDBACK_QUESTIONS = [
@@ -36,6 +37,7 @@ export function BetaPage() {
         }),
       });
       if (res.ok) {
+        AnalyticsEvents.betaFeedbackSubmit();
         setStatus("success");
         form.reset();
       } else {

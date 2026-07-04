@@ -1,6 +1,9 @@
 import { createMetadata } from "@/config/seo";
 import { PageHero } from "@/components/shared/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { faqJsonLd, breadcrumbJsonLd } from "@/lib/seo/json-ld";
+import { siteConfig } from "@/config/seo";
 import { faqItems } from "@/data/faq";
 
 export const metadata = createMetadata({
@@ -12,6 +15,15 @@ export const metadata = createMetadata({
 export default function FAQPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          faqJsonLd(faqItems),
+          breadcrumbJsonLd([
+            { name: "Home", url: siteConfig.url },
+            { name: "FAQ", url: `${siteConfig.url}/faq` },
+          ]),
+        ]}
+      />
       <PageHero
         eyebrow="Support"
         title="Frequently Asked Questions"
