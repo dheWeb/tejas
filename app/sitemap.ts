@@ -3,6 +3,8 @@ import { siteConfig } from "@/config/seo";
 import { getAllOlympiadSlugs } from "@/content/olympiads";
 import { getAllEditionSlugs } from "@/content/editions";
 
+export const revalidate = 86400;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   const staticRoutes = [

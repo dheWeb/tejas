@@ -14,7 +14,13 @@ Everything below is automated except **Google Search Console** (requires your Go
 
 1. Open [Google Search Console](https://search.google.com/search-console)
 2. Click **Add property**
-3. Choose **URL prefix**: `https://tejas.dhe.org.in`
+3. Choose **URL prefix**: `https://tejas.dhe.org.in` (**not** Domain property `tejas.dhe.org.in` — subdomains work better as URL prefix)
+
+If you already added a Domain property and sitemap shows **"Couldn't fetch"**:
+
+1. GSC → **URL Inspection** → paste `https://tejas.dhe.org.in/sitemap.xml` → **Test live URL**
+2. If live test passes, wait 24h — Google often retries automatically
+3. If still failing, add a **URL prefix** property (above), verify, and submit `sitemap.xml` there
 
 ### Step 2: Verify ownership
 

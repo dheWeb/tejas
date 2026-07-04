@@ -1,6 +1,6 @@
 # TEJAS Post-Launch Report
 
-Generated: 2026-07-04T16:55:21.670Z
+Generated: 2026-07-04T20:37:01.889Z
 
 ## Health Checks
 - [x] 200 https://tejas.dhe.org.in/
@@ -15,7 +15,7 @@ Generated: 2026-07-04T16:55:21.670Z
 - [x] 200 https://tejas.dhe.org.in/resources
 - [x] 200 https://tejas.dhe.org.in/schools
 - [x] 200 https://tejas.dhe.org.in/faq
-- [ ] 404 https://tejas.dhe.org.in/beta
+- [x] 200 https://tejas.dhe.org.in/beta
 - [x] 200 https://tejas.dhe.org.in/sitemap.xml
 - [x] 200 https://tejas.dhe.org.in/robots.txt
 - [x] 200 https://tejas.dhe.org.in/opengraph-image
