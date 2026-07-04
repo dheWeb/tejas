@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/scholarships",
     "/faq",
     "/contact",
+    "/beta",
   ];
 
   return [
